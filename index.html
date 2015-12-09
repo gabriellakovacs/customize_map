@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>customize</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Plaster' rel='stylesheet' type='text/css'>
+    <link rel = "icon" type = "image/x-icon" href="img/favicon.ico">
+
+
+    <link href="global.css" rel="stylesheet" type="text/css">
+
+
+    
+</head>
+<body>
+    <div id="map"></div>
+
+    <form class="forms">
+        <fieldset>
+            <legend>Basic</legend>
+            <label for="width">width</label>
+            <br>
+            <input type="number" name="width" id="width">
+            <br>
+            <label for="height">height</label>
+            <br>
+            <input type="number" name="height" id="height">
+            <br>
+            <label for="zoom">zoom</label>
+            <br>
+            <input type="number" name="zoom" id="zoom">
+            <br>
+            <label for="lat">lat</label>
+            <br>
+            <input type="number" name="lat" id="lat" min="-90" max="90">
+            <br>
+            <label for="lng">lng</label>
+            <br>
+            <input type="number" name="lng" id="lng" min="-180" max="180">
+        </fieldset>
+    
+        <fieldset>
+            <legend>Customize</legend>
+
+            <label for="element">Select the element you would like to customize in the chosen area</label>
+            <br>
+            <select name="element">
+                <option value="geometry">geometry</option>
+                <option value="geometryFill">geometry fill</option>
+                <option value="geometryStroke">geometry stroke</option>
+                <option value="labels">labels</option>
+                <option value="labelsIcon">labels icon</option>
+                <option value="labelsText">labels text</option>
+                <option value="labelsTextFill">labels text fill</option>
+                <option value="labelsTextStroke">labels text sroke</option>
+            </select>
+            <br>
+
+            <label for="feature">Select area you would like to customize</label>
+            <br>
+            <select name="feature" id="feature">
+                <option value="administrative">administrative areas</option> 
+                <option value="administrative.country">countries</option> 
+                <option value="administrative.land_parcel">land parcels</option> 
+                <option value="administrative.locality">localities</option> 
+                <option value="administrative.neighborhood">neighborhoods</option> 
+                <option value="administrative.province">provinces</option> 
+                <option value="all">all selector types</option> 
+                <option value="landscape">landscapes</option> 
+                <option value="landscape.man_made">man made structures</option> 
+                <option value="landscape.natural"> natural features</option> 
+                <option value="landscape.natural.landcover">landcover</option>
+                <option value="landscape.natural.terrain">terrain</option>
+                <option value="poi">points of interest</option>
+                <option value="poi.attraction">attraction</option>
+                <option value="poi.business">business</option>
+                <option value="poi.government">government</option>
+                <option value="poi.medical">medical</option>
+                <option value="poi.park">park</option>
+                <option value="poi.place_of_worship">place_of_worship</option>
+                <option value="poi.school">school</option>
+                <option value="poi.sports_complex">sports_complex</option>
+                <option value="road">road</option>
+                <option value="road.arterial">arterial</option>
+                <option value="road.highway">highway</option>
+                <option value="road.highway.controlled_access"></option>
+                <option value="road.local">local</option>
+                <option value="transit">transit</option>
+                <option value="transit.line">line</option>
+                <option value="transit.station">station</option>
+                <option value="transit.station.airport">airport</option>
+                <option value="transit.station.bus">bus</option>
+                <option value="transit.station.rail">rail</option>
+                <option value="water">water</option>
+            </select>
+
+            <label for="color">color</label>
+            <br>
+            <input type="color" name="color" id="color" value="#777777">
+            <br>
+            <label for="visibility">visibility</label>
+            <br>
+            <input type="radio" name="visibility" id="visibility">
+            <br>
+            <label for="weight">weight</label>
+            <br>
+            <input type="number" name="weight" id="weight" min="0">
+
+
+            <label for="stroke">stroke</label>
+            <br>
+            <input type="number" name="stroke" id="stroke">
+            <br>
+            <label for="icon">icon</label>
+            <br>
+            <input type="number" name="icon" id="icon">
+            <br>
+            <label for="textSroke">textSroke</label>
+            <br>
+            <input type="number" name="textSroke" id="textSroke" min="-90" max="90">
+            <br>
+            <label for="textFill">textFill</label>
+            <br>
+            <input type="number" name="textFill" id="textFill" min="-180" max="180">
+        </fieldset>
+    </form>  
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
