@@ -64,13 +64,75 @@
 
             <label for="feature">Select area you would like to customize</label>
             <br>
+            <li class="mainOptionsContainer">
+                <button class="mainArea hvr-shutter-out-vertical" id ="administrative">customize administrative areas</button>
+                <ul class="secondaryArea">
+                    <li class="hvr-shutter-out-vertical" id="administrative">administrative areas</li> 
+                    <li class="hvr-shutter-out-vertical" id="administrative.country">countries</li> 
+                    <li class="hvr-shutter-out-vertical" id="administrative.land_parcel">land parcels</li> 
+                    <li class="hvr-shutter-out-vertical" id="administrative.locality">localities</li> <!--city-->
+                    <li class="hvr-shutter-out-vertical" id="administrative.neighborhood">neighborhoods</li> 
+                    <li class="hvr-shutter-out-vertical" id="administrative.province">provinces</li> <!--province-->
+                </ul>
+                
+            </li>
+            <li>
+                <button class="mainArea hvr-shutter-out-vertical" id ="landscape">customize landscapes</button>
+                <ul class="secondaryArea">
+                    <li id="landscape">landscapes</li> 
+                    <li id="landscape.man_made">man made structures</li> 
+                    <li id="landscape.natural"> natural features</li> 
+                    <li id="landscape.natural.landcover">landcover</li>
+                    <li id="landscape.natural.terrain">terrain</li>
+                </ul>
+            </li>
+            <li>
+                <button class="mainArea hvr-shutter-out-vertical" id ="poi">customize points of interest</button>
+                <ul class="secondaryArea">
+                    <li id="poi">points of interest</li>
+                    <li id="poi.attraction">attraction</li>
+                    <li id="poi.business">business</li>
+                    <li id="poi.government">government</li>
+                    <li id="poi.medical">medical</li>
+                    <li id="poi.park">park</li>
+                    <li id="poi.place_of_worship">place_of_worship</li>
+                    <li id="poi.school">school</li>
+                    <li id="poi.sports_complex">sports_complex</li>
+                </ul>
+            </li>
+            <li>
+                <button class="mainArea hvr-shutter-out-vertical" id ="road">customize roads</button>
+                <ul class="secondaryArea">
+                    <li id="road">road</li>
+                    <li id="road.arterial">arterial</li>
+                    <li id="road.highway">highway</li>
+                    <li id="road.highway.controlled_access"></li>
+                    <li id="road.local">local</li>
+                </ul>
+            </li>
+            <li>
+                <button class="mainArea hvr-shutter-out-vertical" id ="transit">customize transit</button>
+                <ul class="secondaryArea">
+                    <li id="transit">transit</li>
+                    <li id="transit.line">line</li>
+                    <li id="transit.station">station</li>
+                    <li id="transit.station.airport">airport</li>
+                    <li id="transit.station.bus">bus</li>
+                    <li id="transit.station.rail">rail</li>
+                </ul>
+            </li>
+            <li>
+                <button class="mainArea hvr-shutter-out-vertical" id ="water">customize water</li></button>
+
+            
+           
             <select name="feature" id="feature">
                 <option value="administrative">administrative areas</option> 
                 <option value="administrative.country">countries</option> 
                 <option value="administrative.land_parcel">land parcels</option> 
-                <option value="administrative.locality">localities</option> 
+                <option value="administrative.locality">localities</option> <!--city-->
                 <option value="administrative.neighborhood">neighborhoods</option> 
-                <option value="administrative.province">provinces</option> 
+                <option value="administrative.province">provinces</option> <!--province-->
                 <option value="all">all selector types</option> 
                 <option value="landscape">landscapes</option> 
                 <option value="landscape.man_made">man made structures</option> 
@@ -99,7 +161,7 @@
                 <option value="transit.station.rail">rail</option>
                 <option value="water">water</option>
             </select>
-
+            <br>
             <label for="color">color</label>
             <br>
             <input type="color" name="color" id="color" value="#777777">
@@ -112,22 +174,7 @@
             <br>
             <input type="number" name="weight" id="weight" min="0">
 
-
-            <label for="stroke">stroke</label>
-            <br>
-            <input type="number" name="stroke" id="stroke">
-            <br>
-            <label for="icon">icon</label>
-            <br>
-            <input type="number" name="icon" id="icon">
-            <br>
-            <label for="textSroke">textSroke</label>
-            <br>
-            <input type="number" name="textSroke" id="textSroke" min="-90" max="90">
-            <br>
-            <label for="textFill">textFill</label>
-            <br>
-            <input type="number" name="textFill" id="textFill" min="-180" max="180">
+            <input type="button" name="S" id="S" value="submit">
         </fieldset>
     </form>  
 
