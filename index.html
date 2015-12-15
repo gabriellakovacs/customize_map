@@ -10,7 +10,7 @@
     <title>customize</title>
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Plaster' rel='stylesheet' type='text/css'>
-    <link rel = "icon" type = "image/x-icon" href="img/favicon.ico">
+    <!-- <link rel = "icon" type = "image/x-icon" href="img/favicon.ico"> -->
 
 
     <link href="global.css" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
 <body>
     <div id="map"></div>
 
-    <form class="forms">
+    <div class="forms">
         <fieldset>
             <legend>Basic</legend>
             <label for="width">width</label>
@@ -65,74 +65,90 @@
             <label for="feature">Select area you would like to customize</label>
             <br>
             <li class="mainOptionsContainer">
-                <button class="mainArea hvr-shutter-out-vertical" id ="administrative">customize administrative areas</button>
-                <ul class="secondaryArea">
-                    <li class="hvr-shutter-out-vertical" id="administrative">administrative areas</li> 
-                    <li class="hvr-shutter-out-vertical" id="administrative.country">countries</li> 
-                    <li class="hvr-shutter-out-vertical" id="administrative.land_parcel">land parcels</li> 
-                    <li class="hvr-shutter-out-vertical" id="administrative.locality">localities</li> <!--city-->
-                    <li class="hvr-shutter-out-vertical" id="administrative.neighborhood">neighborhoods</li> 
-                    <li class="hvr-shutter-out-vertical" id="administrative.province">provinces</li> <!--province-->
+                <div class="mainArea hvr-shutter-out-vertical" id ="administrative">customize administrative areas</div>
+                <ul class="secondaryAreaContainer collapse">
+                    <li class=" secondaryArea hvr-shutter-out-vertical" id="administrative">
+                        all administrative areas
+                        <form class="customizationPanel collapse">
+                            <label for="color">color</label>
+                            <br>
+                            <input type="color" name="color" id="color" value="#777777">
+                            <br>
+                            <label for="visibility">visibility</label>
+                            <br>
+                            <input type="radio" name="visibility" id="visibility">
+                            <br>
+                            <label for="weight">weight</label>
+                            <br>
+                            <input type="number" name="weight" id="weight" min="0">
+                            <input type="div" name="S" id="S" value="submit">
+                        </form>
+                    </li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.country">countries</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.land_parcel">land parcels</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.locality">localities</li> <!--city-->
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.neighborhood">neighborhoods</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.province">provinces</li> <!--province-->
                 </ul>
                 
             </li>
             <li>
-                <button class="mainArea hvr-shutter-out-vertical" id ="landscape">customize landscapes</button>
-                <ul class="secondaryArea">
-                    <li id="landscape">landscapes</li> 
-                    <li id="landscape.man_made">man made structures</li> 
-                    <li id="landscape.natural"> natural features</li> 
-                    <li id="landscape.natural.landcover">landcover</li>
-                    <li id="landscape.natural.terrain">terrain</li>
+                <div class="mainArea hvr-shutter-out-vertical" id ="landscape">customize landscapes</div>
+                <ul class="secondaryAreaContainer collapse">
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape">all landscapes</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.man_made">man made structures</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural"> natural features</li> 
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural.landcover">landcover</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural.terrain">terrain</li>
                 </ul>
             </li>
             <li>
-                <button class="mainArea hvr-shutter-out-vertical" id ="poi">customize points of interest</button>
-                <ul class="secondaryArea">
-                    <li id="poi">points of interest</li>
-                    <li id="poi.attraction">attraction</li>
-                    <li id="poi.business">business</li>
-                    <li id="poi.government">government</li>
-                    <li id="poi.medical">medical</li>
-                    <li id="poi.park">park</li>
-                    <li id="poi.place_of_worship">place_of_worship</li>
-                    <li id="poi.school">school</li>
-                    <li id="poi.sports_complex">sports_complex</li>
+                <div class="mainArea hvr-shutter-out-vertical" id ="poi">customize points of interest</div>
+                <ul class="secondaryAreaContainer collapse">
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi">all points of interest</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.attraction">attraction</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.business">business</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.government">government</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.medical">medical</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.park">park</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.place_of_worship">place_of_worship</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.school">school</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.sports_complex">sports_complex</li>
                 </ul>
             </li>
             <li>
-                <button class="mainArea hvr-shutter-out-vertical" id ="road">customize roads</button>
-                <ul class="secondaryArea">
-                    <li id="road">road</li>
-                    <li id="road.arterial">arterial</li>
-                    <li id="road.highway">highway</li>
-                    <li id="road.highway.controlled_access"></li>
-                    <li id="road.local">local</li>
+                <div class="mainArea hvr-shutter-out-vertical" id ="road">customize roads</div>
+                <ul class="secondaryAreaContainer collapse">
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="road">all roads</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.arterial">arterial</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.highway">highway</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.highway.controlled_access"></li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.local">local</li>
                 </ul>
             </li>
             <li>
-                <button class="mainArea hvr-shutter-out-vertical" id ="transit">customize transit</button>
-                <ul class="secondaryArea">
-                    <li id="transit">transit</li>
-                    <li id="transit.line">line</li>
-                    <li id="transit.station">station</li>
-                    <li id="transit.station.airport">airport</li>
-                    <li id="transit.station.bus">bus</li>
-                    <li id="transit.station.rail">rail</li>
+                <div class="mainArea hvr-shutter-out-vertical" id ="transit">customize transit</div>
+                <ul class="secondaryAreaContainer collapse">
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit">all transits</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.line">line</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station">station</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.airport">airport</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.bus">bus</li>
+                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.rail">rail</li>
                 </ul>
             </li>
             <li>
-                <button class="mainArea hvr-shutter-out-vertical" id ="water">customize water</li></button>
+                <div class="mainArea hvr-shutter-out-vertical" id ="water">customize water</li></div>
 
             
            
-            <select name="feature" id="feature">
+            <!-- <select name="feature" id="feature">
                 <option value="administrative">administrative areas</option> 
                 <option value="administrative.country">countries</option> 
                 <option value="administrative.land_parcel">land parcels</option> 
-                <option value="administrative.locality">localities</option> <!--city-->
+                <option value="administrative.locality">localities</option> 
                 <option value="administrative.neighborhood">neighborhoods</option> 
-                <option value="administrative.province">provinces</option> <!--province-->
+                <option value="administrative.province">provinces</option>
                 <option value="all">all selector types</option> 
                 <option value="landscape">landscapes</option> 
                 <option value="landscape.man_made">man made structures</option> 
@@ -160,23 +176,11 @@
                 <option value="transit.station.bus">bus</option>
                 <option value="transit.station.rail">rail</option>
                 <option value="water">water</option>
-            </select>
+            </select> -->
             <br>
-            <label for="color">color</label>
-            <br>
-            <input type="color" name="color" id="color" value="#777777">
-            <br>
-            <label for="visibility">visibility</label>
-            <br>
-            <input type="radio" name="visibility" id="visibility">
-            <br>
-            <label for="weight">weight</label>
-            <br>
-            <input type="number" name="weight" id="weight" min="0">
-
-            <input type="button" name="S" id="S" value="submit">
+            
         </fieldset>
-    </form>  
+    </div>  
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="main.js"></script>

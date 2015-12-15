@@ -6,6 +6,8 @@
  	var inputfieldLng = document.getElementById('lng');
  	var inputfieldS = document.getElementById('S');
  	var mainAreaList = document.getElementsByClassName("mainArea");
+ 	var secondaryAreaList = document.getElementsByClassName("secondaryAreaContainer");
+ 	
 
 
  	
@@ -173,8 +175,77 @@ var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
 	    };
 
 	    mainAreaList[i].onclick = function() {
-			window.alert("finallllly");
-	};
+
+			var secondaryAreaContainer = document.querySelectorAll(".mainArea:hover+.secondaryAreaContainer")[0];
+
+			if (secondaryAreaContainer.className.indexOf("collapse") > -1) {
+
+				var expandedItem = document.querySelectorAll(".secondaryAreaContainer.expand");
+
+				if (expandedItem.length>0) {
+					expandedItem[0].className = "secondaryAreaContainer collapse"
+				}
+				secondaryAreaContainer.className = "secondaryAreaContainer expand";
+			} else {
+				secondaryAreaContainer.className = "secondaryAreaContainer collapse";
+			};
+
+
+		};
+	}
+
+	for (var i=0; i < secondaryAreaList.length; i++) {
+
+		secondaryAreaList[i].onmouseover = function() {
+			var secondaryArea = this.id;
+			
+			// if (mainArea == "poi" || mainArea=="transit") {
+			// 	map.setZoom(11);
+			// }
+			
+			var mapStyle = {
+				featureType: mainArea,
+		    	elementType: secondaryArea,
+				stylers: [
+				{ color: "#ff6622" },
+				{visibility:'on'}
+				]
+			};
+
+			originalStyle.push(mapStyle);
+			map.set('styles', 
+				originalStyle
+			);
+	    };
+
+	    secondaryAreaList[i].onmouseleave = function() {
+			originalStyle.pop();
+			map.set('styles', 
+				originalStyle
+			);
+
+			map.setZoom(5);
+	    };
+
+	    secondaryAreaList[i].onclick = function() {
+
+			var secondaryAreaContainer = document.querySelectorAll(".mainArea:hover+.secondaryAreaContainer")[0];
+
+			if (secondaryAreaContainer.className.indexOf("collapse") > -1) {
+
+				var expandedItem = document.querySelectorAll(".secondaryAreaContainer.expand");
+
+				if (expandedItem.length>0) {
+					expandedItem[0].className = "secondaryAreaContainer collapse"
+				}
+				secondaryAreaContainer.className = "secondaryAreaContainer expand";
+			} else {
+				secondaryAreaContainer.className = "secondaryAreaContainer collapse";
+			};
+
+
+		};
+
 	}
 
 	
