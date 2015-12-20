@@ -21,55 +21,127 @@
 <body>
     <div id="map"></div>
 
-    <div class="forms">
-        <fieldset>
-            <legend>Basic</legend>
-            <label for="width">width</label>
-            <br>
-            <input type="number" name="width" id="width">
-            <br>
-            <label for="height">height</label>
-            <br>
-            <input type="number" name="height" id="height">
-            <br>
-            <label for="zoom">zoom</label>
-            <br>
-            <input type="number" name="zoom" id="zoom">
-            <br>
-            <label for="lat">lat</label>
-            <br>
-            <input type="number" name="lat" id="lat" min="-90" max="90">
-            <br>
-            <label for="lng">lng</label>
-            <br>
-            <input type="number" name="lng" id="lng" min="-180" max="180">
-        </fieldset>
+    <main class="customizeMenu">
+        <ul>
+            <li>
+                <div class="mainMenuOption hvr-shutter-out-vertical" id ="basic">basic</div>
+                <form class="embeddingLevel1 customizationPanel collapse">
+                    <fieldset>
+                        <legend></legend>
+                        <label for="width">width</label>
+                        <br>
+                        <input type="number" name="width" id="width">
+                        <br>
+                        <label for="height">height</label>
+                        <br>
+                        <input type="number" name="height" id="height">
+                        <br>
+                        <label for="zoom">zoom</label>
+                        <br>
+                        <input type="number" name="zoom" id="zoom">
+                        <br>
+                        <label for="lat">lat</label>
+                        <br>
+                        <input type="number" name="lat" id="lat" min="-90" max="90">
+                        <br>
+                        <label for="lng">lng</label>
+                        <br>
+                        <input type="number" name="lng" id="lng" min="-180" max="180">
+                    </fieldset>
+                </form>
+        
+            </li>
+        
+
     
-        <fieldset>
-            <legend>Customize</legend>
+            <li>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="administrative">customize administrative areas</div>
+                <ul class="embeddingLevel1 collapse">
+                    <li>
+                        <div class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative">all administrative areas</div>
+                     
+                        
+                        <form class="embeddingLevel2 customizationPanel collapse">
+                            <fieldset>
+                                <legend>geometry</legend>
+                                <fieldset>
+                                    <legend>fill</legend>
+                                    <label for="color">color</label>
+                                    <br>
+                                    <input type="color" name="color" id="color" class="setColor geometry fill" value="#777777">
+                                    <br>
+                                    <label for="visibility">visibility</label>
+                                    <br>
+                                    <input type="radio" name="visibility" value="on" class="setVisibility geometry fill">
+                                    <input type="radio" name="visibility" value="off" class="setVisibility geometry fill">
+                                    <br>
+                                    <label for="weight">weight</label>
+                                    <br>
+                                    <input type="number" name="weight" id="weight" min="0" class="setWeight geometry fill">
+                                    <input type="div" name="S" id="S" value="save changes">
+                                </fieldset>
 
-            <label for="element">Select the element you would like to customize in the chosen area</label>
-            <br>
-            <select name="element">
-                <option value="geometry">geometry</option>
-                <option value="geometryFill">geometry fill</option>
-                <option value="geometryStroke">geometry stroke</option>
-                <option value="labels">labels</option>
-                <option value="labelsIcon">labels icon</option>
-                <option value="labelsText">labels text</option>
-                <option value="labelsTextFill">labels text fill</option>
-                <option value="labelsTextStroke">labels text sroke</option>
-            </select>
-            <br>
+                                <fieldset>
+                                    <legend>stroke</legend>
+                                    <label for="color">color</label>
+                                    <br>
+                                    <input type="color" name="color" id="color" class="setColor geometry stroke" value="#777777">
+                                    <br>
+                                    <label for="visibility">visibility</label>
+                                    <br>
+                                    <input type="radio" name="visibility" value="on" class="setVisibility geometry stroke">
+                                    <input type="radio" name="visibility" value="off" class="setVisibility geometry stroke">
+                                    <br>
+                                    <label for="weight">weight</label>
+                                    <br>
+                                    <input type="number" name="weight" id="weight" min="0" class="setWeight geometry stroke">
+                                    <input type="div" name="S" id="S" value="save changes">
+                                </fieldset>
 
-            <label for="feature">Select area you would like to customize</label>
-            <br>
-            <li class="mainOptionsContainer">
-                <div class="mainArea hvr-shutter-out-vertical" id ="administrative">customize administrative areas</div>
-                <ul class="secondaryAreaContainer collapse">
-                    <li class=" secondaryArea hvr-shutter-out-vertical" id="administrative">
-                        all administrative areas
-                        <form class="customizationPanel collapse">
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>text</legend>
+                                <fieldset>
+                                    <legend>fill</legend>
+                                    <label for="color">color</label>
+                                    <br>
+                                    <input type="color" name="color" id="color" class="setColor text fill" value="#777777">
+                                    <br>
+                                    <label for="visibility">visibility</label>
+                                    <br>
+                                    <input type="radio" name="visibility" value="on" class="setVisibility text fill">
+                                    <input type="radio" name="visibility" value="off" class="setVisibility text fill">
+                                    <br>
+                                    <label for="weight">weight</label>
+                                    <br>
+                                    <input type="number" name="weight" id="weight" min="0" class="setWeight text fill">
+                                    <input type="div" name="S" id="S" value="save changes">
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>stroke</legend>
+                                    <label for="color">color</label>
+                                    <br>
+                                    <input type="color" name="color" id="color" class="setColor text stroke" value="#777777">
+                                    <br>
+                                    <label for="visibility">visibility</label>
+                                    <br>
+                                    <input type="radio" name="visibility" value="on" class="setVisibility text stroke">
+                                    <input type="radio" name="visibility" value="off" class="setVisibility text stroke">
+                                    <br>
+                                    <label for="weight">weight</label>
+                                    <br>
+                                    <input type="number" name="weight" id="weight" min="0" class="setWeight text stroke">
+                                    <input type="div" name="S" id="S" value="save changes">
+                                </fieldset
+                            </fieldset>
+                            
+                        </form>
+                    </li> 
+                    <li>
+                        <div class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative.country">countries</div>
+                        <form class="embeddingLevel2 customizationPanel collapse">
                             <label for="color">color</label>
                             <br>
                             <input type="color" name="color" id="color" value="#777777">
@@ -84,65 +156,77 @@
                             <input type="div" name="S" id="S" value="submit">
                         </form>
                     </li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.country">countries</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.land_parcel">land parcels</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.locality">localities</li> <!--city-->
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.neighborhood">neighborhoods</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="administrative.province">provinces</li> <!--province-->
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative.land_parcel">land parcels</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative.locality">localities</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative.neighborhood">neighborhoods</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="administrative.province">provinces</li> 
                 </ul>
                 
             </li>
             <li>
-                <div class="mainArea hvr-shutter-out-vertical" id ="landscape">customize landscapes</div>
-                <ul class="secondaryAreaContainer collapse">
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape">all landscapes</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.man_made">man made structures</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural"> natural features</li> 
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural.landcover">landcover</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="landscape.natural.terrain">terrain</li>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="landscape">customize landscapes</div>
+                <ul class="embeddingLevel1 collapse">
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="landscape">all landscapes</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="landscape.man_made">man made structures</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="landscape.natural"> natural features</li> 
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="landscape.natural.landcover">landcover</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="landscape.natural.terrain">terrain</li>
                 </ul>
             </li>
             <li>
-                <div class="mainArea hvr-shutter-out-vertical" id ="poi">customize points of interest</div>
-                <ul class="secondaryAreaContainer collapse">
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi">all points of interest</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.attraction">attraction</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.business">business</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.government">government</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.medical">medical</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.park">park</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.place_of_worship">place_of_worship</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.school">school</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="poi.sports_complex">sports_complex</li>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="poi">customize points of interest</div>
+                <ul class="embeddingLevel1 collapse">
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi">all points of interest</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.attraction">attraction</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.business">business</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.government">government</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.medical">medical</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.park">park</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.place_of_worship">place of worship</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.school">school</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="poi.sports_complex">sports complex</li>
                 </ul>
             </li>
             <li>
-                <div class="mainArea hvr-shutter-out-vertical" id ="road">customize roads</div>
-                <ul class="secondaryAreaContainer collapse">
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="road">all roads</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.arterial">arterial</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.highway">highway</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.highway.controlled_access"></li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="road.local">local</li>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="road">customize roads</div>
+                <ul class="embeddingLevel1 collapse">
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="road">all roads</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="road.arterial">arterial</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="road.highway">highway</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="road.highway.controlled_access"></li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="road.local">local</li>
                 </ul>
             </li>
             <li>
-                <div class="mainArea hvr-shutter-out-vertical" id ="transit">customize transit</div>
-                <ul class="secondaryAreaContainer collapse">
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit">all transits</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.line">line</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station">station</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.airport">airport</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.bus">bus</li>
-                    <li class="secondaryArea hvr-shutter-out-vertical" id="transit.station.rail">rail</li>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="transit">customize transit</div>
+                <ul class="embeddingLevel1 collapse">
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit">all transits</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit.line">line</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit.station">station</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit.station.airport">airport</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit.station.bus">bus</li>
+                    <li class="subMenuOption previewAreaOnMap hvr-shutter-out-vertical" id="transit.station.rail">rail</li>
                 </ul>
             </li>
             <li>
-                <div class="mainArea hvr-shutter-out-vertical" id ="water">customize water</li></div>
+                <div class="mainMenuOption previewAreaOnMap hvr-shutter-out-vertical" id ="water">customize water</li></div>
+            </li>
+        </ul>
 
             
            
-            <!-- <select name="feature" id="feature">
+            
+           
+    </main>  
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
+
+<!-- <select name="feature" id="feature">
                 <option value="administrative">administrative areas</option> 
                 <option value="administrative.country">countries</option> 
                 <option value="administrative.land_parcel">land parcels</option> 
@@ -177,14 +261,3 @@
                 <option value="transit.station.rail">rail</option>
                 <option value="water">water</option>
             </select> -->
-            <br>
-            
-        </fieldset>
-    </div>  
-
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="main.js"></script>
-
-    
-</body>
-</html>

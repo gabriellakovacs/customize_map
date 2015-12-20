@@ -4,9 +4,16 @@
  	var inputfieldZoom = document.getElementById('zoom');
  	var inputfieldLat = document.getElementById('lat');
  	var inputfieldLng = document.getElementById('lng');
+
  	var inputfieldS = document.getElementById('S');
- 	var mainAreaList = document.getElementsByClassName("mainArea");
- 	var secondaryAreaList = document.getElementsByClassName("secondaryAreaContainer");
+ 	
+ 	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap");
+ 	var mainMenuOptionList = document.getElementsByClassName("mainMenuOption");
+ 	var embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
+
+ 	var setColorInputList = document.getElementsByClassName("setColor");
+ 	var setWeightInputList = document.getElementsByClassName("setWeight");
+ 	var setVisibilityInputList = document.getElementsByClassName("setVisibility");
  	
 
 
@@ -90,8 +97,8 @@
 	];
 
 	map.set('styles', originalStyle);
-var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
+	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+	var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
 
 	var mapCSS = document.getElementById("map");
 
@@ -139,19 +146,17 @@ var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
 			originalStyle
 		);
 	};
-
-	
-	for (var i=0; i < mainAreaList.length; i++) {
-
-		mainAreaList[i].onmouseover = function() {
-			var mainArea = this.id;
+//customization menu items preview the area which are goung to be effected on hover
+	for (var i=0; i < previewAreaOnMapList.length; i++) {
+		previewAreaOnMapList[i].onmouseover = function() {
+			var area = this.id;
 			
-			if (mainArea == "poi" || mainArea=="transit") {
-				map.setZoom(11);
-			}
+			// if (area == "poi" || area=="transit") {
+			// 	map.setZoom(11);
+			// }
 			
 			var mapStyle = {
-				featureType: mainArea,
+				featureType: area,
 		    	elementType: 'all',
 				stylers: [
 				{ color: "#ff6622" },
@@ -165,94 +170,160 @@ var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
 			);
 	    };
 
-	    mainAreaList[i].onmouseleave = function() {
+	    previewAreaOnMapList[i].onmouseleave = function() {
 			originalStyle.pop();
 			map.set('styles', 
 				originalStyle
 			);
-
-			map.setZoom(5);
 	    };
+	}
 
-	    mainAreaList[i].onclick = function() {
+//extend collapsed submenu on click on main menu
+	for (var i=0; i < mainMenuOptionList.length; i++) {
 
-			var secondaryAreaContainer = document.querySelectorAll(".mainArea:hover+.secondaryAreaContainer")[0];
+	    mainMenuOptionList[i].onclick = function() {
 
-			if (secondaryAreaContainer.className.indexOf("collapse") > -1) {
+	    	var mainMenuOption = this.id;
 
-				var expandedItem = document.querySelectorAll(".secondaryAreaContainer.expand");
+			var embeddingLevel1 = document.querySelectorAll(".mainMenuOption:hover+.embeddingLevel1")[0];
+
+			if (embeddingLevel1.className.indexOf("collapse") > -1) {
+
+				var expandedItem = document.querySelectorAll(".embeddingLevel1.expand");
 
 				if (expandedItem.length>0) {
-					expandedItem[0].className = "secondaryAreaContainer collapse"
+					expandedItem[0].className = "embeddingLevel1 collapse"
 				}
-				secondaryAreaContainer.className = "secondaryAreaContainer expand";
+				embeddingLevel1.className = "embeddingLevel1 expand";
 			} else {
-				secondaryAreaContainer.className = "secondaryAreaContainer collapse";
+				embeddingLevel1.className = "embeddingLevel1 collapse";
 			};
+
+//extend customization panel on click on sub menu
+			var embeddingLevel1List = document.querySelectorAll(".subMenuOption");
+			for (var i=0; i < embeddingLevel1List.length; i++) {
+
+
+			    embeddingLevel1List[i].onclick = function() {
+
+					var embeddingLevel2 = document.querySelectorAll(".subMenuOption:hover+.embeddingLevel2")[0];
+
+					if (embeddingLevel2.className.indexOf("collapse") > -1) {
+
+						var expandedItem = document.querySelectorAll(".embeddingLevel2.expand");
+
+						if (expandedItem.length>0) {
+							expandedItem[0].className = "embeddingLevel2 collapse"
+						}
+						embeddingLevel2.className = "embeddingLevel2 expand";
+					} else {
+						embeddingLevel2.className = "embeddingLevel2 collapse";
+					};
+				};
+		}
 
 
 		};
 	}
 
-	for (var i=0; i < secondaryAreaList.length; i++) {
+//function to change areas color/visibility/weight based on user input
 
-		secondaryAreaList[i].onmouseover = function() {
-			var secondaryArea = this.id;
+function changeMapStyle(stylerType, InputList) {
+
+		for (var i=0; i < InputList.length; i++) {
+
+			    InputList[i].onchange = function() {
+
+			    	//window.alert("we are inside the function, i repeat we are inside the function.");
+
+					var stylerValue = this.value;
+
+					if (stylerType === "color") {
+						var stylerObject = {color:stylerValue};
+					} else if (stylerType === "weight") {
+						var stylerObject = {weight:stylerValue};
+					} else if (stylerType === "visibility") {
+						var stylerObject = {visibility:stylerValue};
+					};
+					
+
+					if (this.className.indexOf("fill") > -1) {
+						var fillORstroke = "fill";
+					} else if (this.className.indexOf("stroke") > -1) {
+						var fillORstroke = "stroke";
+					}
+
+					if (this.className.indexOf("geometry") > -1) {
+						var textORgeometry = "geometry";
+					} else if (this.className.indexOf("text") > -1) {
+						var textORgeometry = "labels.text";
+					}
+
+					var elementType = textORgeometry + "." + fillORstroke;
 			
-			// if (mainArea == "poi" || mainArea=="transit") {
-			// 	map.setZoom(11);
-			// }
-			
-			var mapStyle = {
-				featureType: mainArea,
-		    	elementType: secondaryArea,
-				stylers: [
-				{ color: "#ff6622" },
-				{visibility:'on'}
-				]
-			};
+					var mapStyle = {
+						featureType: "administrative",
+				    	elementType: elementType,
+						stylers: [
+						stylerObject
+						]
+					};
 
-			originalStyle.push(mapStyle);
-			map.set('styles', 
-				originalStyle
-			);
-	    };
-
-	    secondaryAreaList[i].onmouseleave = function() {
-			originalStyle.pop();
-			map.set('styles', 
-				originalStyle
-			);
-
-			map.setZoom(5);
-	    };
-
-	    secondaryAreaList[i].onclick = function() {
-
-			var secondaryAreaContainer = document.querySelectorAll(".mainArea:hover+.secondaryAreaContainer")[0];
-
-			if (secondaryAreaContainer.className.indexOf("collapse") > -1) {
-
-				var expandedItem = document.querySelectorAll(".secondaryAreaContainer.expand");
-
-				if (expandedItem.length>0) {
-					expandedItem[0].className = "secondaryAreaContainer collapse"
-				}
-				secondaryAreaContainer.className = "secondaryAreaContainer expand";
-			} else {
-				secondaryAreaContainer.className = "secondaryAreaContainer collapse";
-			};
-
-
+					originalStyle.push(mapStyle);
+					map.set('styles', 
+						originalStyle
+					);
 		};
+	};
 
-	}
-
-	
-
-	
+}
 
 
+
+//change the color of selected area
+changeMapStyle("color", setColorInputList);
+
+//change the color of selected area
+changeMapStyle("visibility", setVisibilityInputList);
+
+//change the color of selected area
+changeMapStyle("weight", setWeightInputList);
+
+	// for (var i=0; i < setColorInputList.length; i++) {
+
+	// 		    setColorInputList[i].onchange = function() {
+
+	// 				var color = this.value;
+
+	// 				if (this.className.indexOf("fill") > -1) {
+	// 					var fillORstroke = "fill";
+	// 				} else if (this.className.indexOf("stroke") > -1) {
+	// 					var fillORstroke = "stroke";
+	// 				}
+
+	// 				if (this.className.indexOf("geometry") > -1) {
+	// 					var textORgeometry = "geometry";
+	// 				} else if (this.className.indexOf("text") > -1) {
+	// 					var textORgeometry = "labels.text";
+	// 				}
+
+	// 				var elementType = textORgeometry + "." + fillORstroke;
+			
+	// 				var mapStyle = {
+	// 					featureType: "administrative",
+	// 			    	elementType: elementType,
+	// 					stylers: [
+	// 					{ color: color },
+	// 					{visibility:'on'}
+	// 					]
+	// 				};
+
+	// 				originalStyle.push(mapStyle);
+	// 				map.set('styles', 
+	// 					originalStyle
+	// 				);
+	// 	};
+	// };
 
 
 	marker = new google.maps.Marker({
