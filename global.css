@@ -1,30 +1,23 @@
+body {
+	margin:0;
+	line-height: 140%;
+	overflow-x:hidden;
+}
 #map {
 	width: 100vw;
 	height: 100vh;
-	position: fixed;
-}
-
-body {
-	margin:0;
-	    line-height: 140%;
-}
-
-.mainOptionsContainer {
-	position: relative;
+	position: fixed !important; //to overwrite javascript styling on googlemaps
 }
 
 .expand {
 	display: inline-block;
+	height: 100px;
 	
 }
 
 .collapse {
 	display: none;
 	height: 0px;
-}
-
-.mainArea {
-	margin: .4em;
 	padding: 1em;
 	cursor: pointer;
 	background: #e1e1e1;
@@ -33,7 +26,16 @@ body {
 	font-weight: 700;
 }
 
-.secondaryArea{
+.mainMenuOption{
+	cursor: pointer;
+	background: #888;
+	color: #000;
+	margin: .4em;
+	padding: .5em;
+}
+
+.subMenuOption{
+	cursor: pointer;
 	background: #fff;
 	color: #333;
 	margin: .4em;
@@ -42,7 +44,7 @@ body {
 
 .customizationPanel {
 	height: 100px;
-	transition:30s;
+	transition: height 300s;
 }
 
 ul {
@@ -54,44 +56,14 @@ li {
 	list-style: none;
 }
 
-.forms {
+.customizeMenu {
 	padding-left: 20px;
-	width: 40vw;
+	width: 32vw;
 	position: absolute;
 	right: 0;
 	top: 0;
 	min-height: 100vh;
-
-	
-	background: rgba(245,135,149,1);
-background: -moz-linear-gradient(top, rgba(245,135,149,1) 0%, rgba(237,184,178,1) 51%, rgba(134,235,145,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(245,135,149,1)), color-stop(51%, rgba(237,184,178,1)), color-stop(100%, rgba(134,235,145,1)));
-background: -webkit-linear-gradient(top, rgba(245,135,149,1) 0%, rgba(237,184,178,1) 51%, rgba(134,235,145,1) 100%);
-background: -o-linear-gradient(top, rgba(245,135,149,1) 0%, rgba(237,184,178,1) 51%, rgba(134,235,145,1) 100%);
-background: -ms-linear-gradient(top, rgba(245,135,149,1) 0%, rgba(237,184,178,1) 51%, rgba(134,235,145,1) 100%);
-background: linear-gradient(to bottom, rgba(245,135,149,1) 0%, rgba(237,184,178,1) 51%, rgba(134,235,145,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58795', endColorstr='#86eb91', GradientType=0 );
-
-background: rgba(153,16,232,1);
-background: -moz-linear-gradient(top, rgba(153,16,232,1) 0%, rgba(237,184,178,1) 51%, rgba(255,234,0,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(153,16,232,1)), color-stop(51%, rgba(237,184,178,1)), color-stop(100%, rgba(255,234,0,1)));
-background: -webkit-linear-gradient(top, rgba(153,16,232,1) 0%, rgba(237,184,178,1) 51%, rgba(255,234,0,1) 100%);
-background: -o-linear-gradient(top, rgba(153,16,232,1) 0%, rgba(237,184,178,1) 51%, rgba(255,234,0,1) 100%);
-background: -ms-linear-gradient(top, rgba(153,16,232,1) 0%, rgba(237,184,178,1) 51%, rgba(255,234,0,1) 100%);
-background: linear-gradient(to bottom, rgba(153,16,232,1) 0%, rgba(237,184,178,1) 51%, rgba(255,234,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9910e8', endColorstr='#ffea00', GradientType=0 );
-
-background: rgba(65,80,242,1);
-background: -moz-linear-gradient(top, rgba(65,80,242,1) 0%, rgba(237,184,178,1) 51%, rgba(245,144,201,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(65,80,242,1)), color-stop(51%, rgba(237,184,178,1)), color-stop(100%, rgba(245,144,201,1)));
-background: -webkit-linear-gradient(top, rgba(65,80,242,1) 0%, rgba(237,184,178,1) 51%, rgba(245,144,201,1) 100%);
-background: -o-linear-gradient(top, rgba(65,80,242,1) 0%, rgba(237,184,178,1) 51%, rgba(245,144,201,1) 100%);
-background: -ms-linear-gradient(top, rgba(65,80,242,1) 0%, rgba(237,184,178,1) 51%, rgba(245,144,201,1) 100%);
-background: linear-gradient(to bottom, rgba(65,80,242,0.8) 0%, rgba(237,184,178,0.8) 51%, rgba(245,144,201,0.8) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4150f2', endColorstr='#f590c9', GradientType=0 );
-
 	background: rgba(100, 100, 100, .8);
-
 	bottom: 1px solid red;
 	color: white;
 	font-family: Quicksand;
@@ -154,4 +126,14 @@ a {
 .hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
+}
+
+.fill, .stroke {
+	display: inline-block;
+	width: 40%;
+
+}
+
+input {
+	width:60%;
 }
