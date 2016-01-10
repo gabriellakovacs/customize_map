@@ -1,23 +1,23 @@
  function initialize() {
+ //access input fields in BASIC menu
  	var inputfieldWidth = document.getElementById('width');
  	var inputfieldHeight = document.getElementById('height');
  	var inputfieldZoom = document.getElementById('zoom');
  	var inputfieldLat = document.getElementById('lat');
  	var inputfieldLng = document.getElementById('lng');
 
- 	var inputfieldS = document.getElementById('S');
- 	
+ //access multiple level of menu items
  	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap");
  	var mainMenuOptionList = document.getElementsByClassName("mainMenuOption");
  	var embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
-
+ 	
+//access input fields in custommization panel
  	var setColorInputList = document.getElementsByClassName("setColor");
  	var setWeightInputList = document.getElementsByClassName("setWeight");
  	var setVisibilityInputList = document.getElementsByClassName("setVisibility");
  	
 
-
- 	
+//setup the original styles and values for the map
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
         center: new google.maps.LatLng(47.5403, 19.0463),
@@ -95,11 +95,12 @@
 	    ]
 	}
 	];
-
+	
 	map.set('styles', originalStyle);
 	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 	var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
 
+//functions that change map when user changes BASIC map settings
 	var mapCSS = document.getElementById("map");
 
 	inputfieldWidth.onchange = function() {
@@ -131,29 +132,10 @@
     	marker.setPosition(newCenter);
 	};
 
-	inputfieldS.onclick = function() {
-		var color = document.getElementById("color").value;
-		var mapStyle = {
-			featureType: 'landscape.natural.terrain',
-	    	elementType: 'all',
-			stylers: [
-			{ color: color }
-			]
-		};
-
-		originalStyle.push(mapStyle);
-		map.set('styles', 
-			originalStyle
-		);
-	};
-//customization menu items preview the area which are goung to be effected on hover
+//preview the area which is goung to be effected on hover on CUSTOMIZATION menu items 
 	for (var i=0; i < previewAreaOnMapList.length; i++) {
 		previewAreaOnMapList[i].onmouseover = function() {
 			var area = this.id;
-			
-			// if (area == "poi" || area=="transit") {
-			// 	map.setZoom(11);
-			// }
 			
 			var mapStyle = {
 				featureType: area,
@@ -178,7 +160,7 @@
 	    };
 	}
 
-//extend collapsed submenu on click on main menu
+//expand collapsed submenu on click on main menu
 	for (var i=0; i < mainMenuOptionList.length; i++) {
 
 	    mainMenuOptionList[i].onclick = function() {
@@ -199,7 +181,7 @@
 				embeddingLevel1.className = "embeddingLevel1 collapse";
 			};
 
-//extend customization panel on click on sub menu
+//expand customization panel on click on submenu
 			var embeddingLevel1List = document.querySelectorAll(".subMenuOption");
 			for (var i=0; i < embeddingLevel1List.length; i++) {
 
@@ -221,12 +203,10 @@
 					};
 				};
 		}
-
-
 		};
 	}
 
-//function to change areas color/visibility/weight based on user input
+//function to change area`s color/visibility/weight based on user input
 
 function changeMapStyle(stylerType, InputList) {
 
@@ -234,10 +214,9 @@ function changeMapStyle(stylerType, InputList) {
 
 			    InputList[i].onchange = function() {
 
-			    	//window.alert("we are inside the function, i repeat we are inside the function.");
-
+//create styler object based on function`s input (styler type) and on input value given by the user
 					var stylerValue = this.value;
-
+					
 					if (stylerType === "color") {
 						var stylerObject = {color:stylerValue};
 					} else if (stylerType === "weight") {
@@ -246,29 +225,49 @@ function changeMapStyle(stylerType, InputList) {
 						var stylerObject = {visibility:stylerValue};
 					};
 					
-
+//assign value to fillORstroke based on changed input`s class  name ("" is only an option when textORgeometry is labels.icon)
 					if (this.className.indexOf("fill") > -1) {
-						var fillORstroke = "fill";
+						var fillORstroke = ".fill";
 					} else if (this.className.indexOf("stroke") > -1) {
-						var fillORstroke = "stroke";
+						var fillORstroke = ".stroke";
+					} else {
+						var fillORstroke = "";
 					}
 
+//assign value to textORgeometry based on changed input`s class  name 
 					if (this.className.indexOf("geometry") > -1) {
 						var textORgeometry = "geometry";
 					} else if (this.className.indexOf("text") > -1) {
 						var textORgeometry = "labels.text";
+					} else if (this.className.indexOf("icon") > -1) {
+						var textORgeometry = "labels.icon";
 					}
 
-					var elementType = textORgeometry + "." + fillORstroke;
-			
+//assign value to elementType by concatenating textORgeometry with fillORstroke
+					var elementType = textORgeometry + fillORstroke;
+
+//assign value to featureType based on changed input`s class name starting with "featureType"		
+					var origFeatureType = this.className.match(/featureType(\w*)/)[1];
+					var featureType = "";
+					for (n in origFeatureType) {
+						if (origFeatureType[n] === origFeatureType[n].toUpperCase()  && n>0 && origFeatureType[n] !== "_") {
+							featureType = featureType + "." + origFeatureType[n].toLowerCase()
+						}
+						else {
+							featureType = featureType + origFeatureType[n];
+						}
+					}
+
+//create new map style 
 					var mapStyle = {
-						featureType: "administrative",
+						featureType: featureType,
 				    	elementType: elementType,
 						stylers: [
 						stylerObject
 						]
 					};
 
+//change map styling
 					originalStyle.push(mapStyle);
 					map.set('styles', 
 						originalStyle
@@ -278,52 +277,14 @@ function changeMapStyle(stylerType, InputList) {
 
 }
 
-
-
 //change the color of selected area
 changeMapStyle("color", setColorInputList);
 
-//change the color of selected area
+//change the visibility of selected area
 changeMapStyle("visibility", setVisibilityInputList);
 
-//change the color of selected area
+//change the weight of selected area
 changeMapStyle("weight", setWeightInputList);
-
-	// for (var i=0; i < setColorInputList.length; i++) {
-
-	// 		    setColorInputList[i].onchange = function() {
-
-	// 				var color = this.value;
-
-	// 				if (this.className.indexOf("fill") > -1) {
-	// 					var fillORstroke = "fill";
-	// 				} else if (this.className.indexOf("stroke") > -1) {
-	// 					var fillORstroke = "stroke";
-	// 				}
-
-	// 				if (this.className.indexOf("geometry") > -1) {
-	// 					var textORgeometry = "geometry";
-	// 				} else if (this.className.indexOf("text") > -1) {
-	// 					var textORgeometry = "labels.text";
-	// 				}
-
-	// 				var elementType = textORgeometry + "." + fillORstroke;
-			
-	// 				var mapStyle = {
-	// 					featureType: "administrative",
-	// 			    	elementType: elementType,
-	// 					stylers: [
-	// 					{ color: color },
-	// 					{visibility:'on'}
-	// 					]
-	// 				};
-
-	// 				originalStyle.push(mapStyle);
-	// 				map.set('styles', 
-	// 					originalStyle
-	// 				);
-	// 	};
-	// };
 
 
 	marker = new google.maps.Marker({
@@ -341,5 +302,3 @@ function modify () {
 
 
 window.onload = initialize();
-
-
