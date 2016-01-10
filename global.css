@@ -3,16 +3,29 @@ body {
 	line-height: 140%;
 	overflow-x:hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding:0;
+  margin:0;
+}
+
+li {
+  list-style: none;
+}
+
 #map {
 	width: 100vw;
 	height: 100vh;
-	position: fixed !important; //to overwrite javascript styling on googlemaps
+	position: fixed !important; /*to overwrite javascript styling on googlemaps*/
 }
 
 .expand {
 	display: inline-block;
 	height: 100px;
-	
 }
 
 .collapse {
@@ -47,15 +60,6 @@ body {
 	transition: height 300s;
 }
 
-ul {
-	padding:0;
-	margin:0;
-}
-
-li {
-	list-style: none;
-}
-
 .customizeMenu {
 	padding-left: 20px;
 	width: 32vw;
@@ -71,9 +75,18 @@ li {
 
 input, select, option {
 	background: transparent;
-	border: 1px solid white;
-	margin: 10px;
-	height: 20px;
+  border: none;
+	margin: 0px;
+	height: 65px;
+  width: 65px;
+  padding: 0;
+  line-height: 50px;
+  appearance:none;
+  -webkit-appearance: none
+}
+
+label {
+  cursor: pointer;
 }
 
 .hvr-shutter-out-vertical {
@@ -130,10 +143,76 @@ a {
 
 .fill, .stroke {
 	display: inline-block;
-	width: 40%;
 
 }
 
-input {
-	width:60%;
+.container {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.container label {
+  position: absolute;
+  line-height: 65px;
+
+}
+
+.container input {
+  position: absolute;
+  left:-2px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: transparent;
+  
+}
+
+.container {
+  width: 65px;
+  height: 65px; 
+  border: 2px solid white;
+  margin: 10px;
+  display: inline-block;
+  background: grey;
+  perspective: 800px;
+}
+
+.visibility.container input{
+  display: none;
+}
+
+.visibility.container label{
+  line-height: 61px;
+  width: 61px;
+  height: 61px;
+  cursor: pointer;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.visibility.container input+label {
+  transform: rotateY( 180deg);
+  transition: transform 1s ease;
+}
+
+.visibility.container input:checked+label {
+  transform: rotateY( 0deg);
+  transition: transform 1s ease;
+}
+
+.visibility.container:hover input+label {
+  transform: rotateY( 360deg);
+}
+
+.visibility.container:hover input:checked+label {
+  transform: rotateY( 180deg);
+}
+
+.setVisibility.on+label{
+  background: red;
+}
+
+.setVisibility.off+label{
+  background: blue;
 }
