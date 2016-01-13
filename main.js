@@ -5,17 +5,34 @@
  	var inputfieldZoom = document.getElementById('zoom');
  	var inputfieldLat = document.getElementById('lat');
  	var inputfieldLng = document.getElementById('lng');
+ 	var inputfieldMarkerON = document.getElementById("markerON");
+ 	var inputfieldMarkerOFF = document.getElementById("markerOFF");
+ 	var inputfieldMarkerLat = document.getElementById('markerLat');
+ 	var inputfieldMarkerLng = document.getElementById('markerLng');
+
 
  //access multiple level of menu items
  	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap");
  	var mainMenuOptionList = document.getElementsByClassName("mainMenuOption");
  	var embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
- 	
+
 //access input fields in custommization panel
  	var setColorInputList = document.getElementsByClassName("setColor");
  	var setWeightInputList = document.getElementsByClassName("setWeight");
  	var setVisibilityInputList = document.getElementsByClassName("setVisibility");
- 	
+ 	var labels = document.getElementsByTagName("LABEL")
+ 
+ //
+
+    var colorLabelInputConnection = {},
+    label;
+
+for (var i = 0; i < labels.length; i++) {
+    label = labels[i];
+    if (document.getElementById(label.htmlFor)) {
+        colorLabelInputConnection[label.htmlFor] = label;
+    }
+}	
 
 //setup the original styles and values for the map
     var mapCanvas = document.getElementById('map');
@@ -132,6 +149,18 @@
     	marker.setPosition(newCenter);
 	};
 
+	inputfieldMarkerON.onchange = function() {
+		inputfieldMarkerLat.disabled = false;
+		inputfieldMarkerLng.disabled = false;
+	};
+
+	inputfieldMarkerOFF.onchange = function() {
+		inputfieldMarkerLat.disabled = true;
+		inputfieldMarkerLng.disabled = true;
+	};
+
+	
+
 //preview the area which is goung to be effected on hover on CUSTOMIZATION menu items 
 	for (var i=0; i < previewAreaOnMapList.length; i++) {
 		previewAreaOnMapList[i].onmouseover = function() {
@@ -141,7 +170,7 @@
 				featureType: area,
 		    	elementType: 'all',
 				stylers: [
-				{ color: "#ff6622" },
+				{ color: "#087F6A" },
 				{visibility:'on'}
 				]
 			};
@@ -219,6 +248,8 @@ function changeMapStyle(stylerType, InputList) {
 					
 					if (stylerType === "color") {
 						var stylerObject = {color:stylerValue};
+						var associatedLabel = colorLabelInputConnection[this.id];
+						associatedLabel.style.backgroundColor = stylerValue;
 					} else if (stylerType === "weight") {
 						var stylerObject = {weight:stylerValue};
 					} else if (stylerType === "visibility") {
@@ -287,10 +318,7 @@ changeMapStyle("visibility", setVisibilityInputList);
 changeMapStyle("weight", setWeightInputList);
 
 
-	marker = new google.maps.Marker({
-        position: new google.maps.LatLng(inputfieldLat.value*1, inputfieldLng.value*1),
-        map: map
-    });
+	
 
 }
 
