@@ -52,7 +52,7 @@
                         <label for="marker">marker</label>
                         <br>
                         <input type="number" name="marker" id="marker">
-                        <div class="marker container flip">
+                        <div class="marker container switchOnOff">
                             <input type="radio" name="markerON" id="markerON" value="on" class="marker on">
                             <label for="markerON">on</label>
                             <input type="radio" name="markerOFF" id="markerOFF" value="off" class="marker off" checked="checked">
@@ -83,14 +83,14 @@
                         <form class="embeddingLevel2 customizationPanel collapse">
                             <fieldset>
                                 <legend>geometry</legend>
-                                <fieldset>
+                                <!-- <fieldset>
                                     <legend>fill</legend>
                                     <div class="color container">
                                         <input type="color" name="color" id="colorGeometryFill" class="setColor geometry fill featureTypeadministrative" value="#777777">
                                         <label for="colorGeometryFill">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeAllGeometryFill" id="visibilityAdministrativeAllGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrative">
                                         <label for="visibilityAdministrativeAllGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeAllGeometryFill" id="visibilityAdministrativeAllGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrative" checked="checked">
@@ -102,24 +102,24 @@
                                         <label for="weightGeometryFill">weight</label>
                                     </div>
                                 </fieldset>
-
+ -->
                                 <fieldset>
                                     <legend>stroke</legend>
                                     <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryStroke" class="setColor geometry stroke featureTypeadministrative" value="#777777">
-                                        <label for="colorGeometryStroke">color</label>
+                                        <input type="color" name="color" id="colorAdministrativeAllGeometryStroke" class="setColor geometry stroke featureTypeadministrative" value="#777777">
+                                        <label for="colorAdministrativeAllGeometryStroke">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeAllGeometryStroke" id="visibilityAdministrativeAllGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrative">
-                                        <label for="visibilityAdministrativeAllGeometryStrokeON">on</label>
+                                        <label for="visibilityAdministrativeAllGeometryStrokeON">visible</label>
                                         <input type="radio" name="visibilityAdministrativeAllGeometryStroke" id="visibilityAdministrativeAllGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrative" checked="checked">
-                                        <label for="visibilityAdministrativeAllGeometryStrokeOFF">off</label>
+                                        <label for="visibilityAdministrativeAllGeometryStrokeOFF">invisible</label>
                                     </div>
                                     
                                     <div class="weight container">
-                                        <input type="number" name="weight" id="weightGeometryStroke" min="0" class="setWeight geometry stroke featureTypeadministrative">
-                                        <label for="weightGeometryStroke">weight</label>
+                                        <input type="number" name="weight" id="weightAdministrativeAllGeometryStroke" min="0" class="setWeight geometry stroke featureTypeadministrative">
+                                        <label for="weightAdministrativeAllGeometryStroke">weight</label>
                                     </div>
                                 </fieldset>
 
@@ -130,11 +130,11 @@
                                 <fieldset>
                                     <legend>fill</legend>
                                     <div class="color container">
-                                        <input type="color" name="color" id="colorTextFill" class="setColor text fill featureTypeadministrative" value="#777777">
-                                        <label for="colorTextFill">color</label>
+                                        <input type="color" name="color" id="colorAdministrativeAllTextFill" class="setColor text fill featureTypeadministrative" value="#777777">
+                                        <label for="colorAdministrativeAllTextFill">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeAllTextFill" id="visibilityAdministrativeAllTextFillON" value="on" class="setVisibility text fill on featureTypeadministrative">
                                         <label for="visibilityAdministrativeAllTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeAllTextFill" id="visibilityAdministrativeAllTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrative" checked="checked">
@@ -142,19 +142,19 @@
                                     </div>
                                     
                                     <div class="weight container">
-                                        <input type="number" name="weight" id="weightTextFill" min="0" class="setWeight text fill featureTypeadministrative">
-                                        <label for="weightTextFill">weight</label>
+                                        <input type="number" name="weight" id="weightAdministrativeAllTextFill" min="0" class="setWeight text fill featureTypeadministrative">
+                                        <label for="weightAdministrativeAllTextFill">weight</label>
                                     </div>
                                 </fieldset>
 
                                 <fieldset>
                                     <legend>stroke</legend>
                                     <div class="color container">
-                                        <input type="color" name="color" id="colorTextStroke" class="setColor text stroke featureTypeadministrative" value="#777777">
-                                        <label for="colorTextStroke">color</label>
+                                        <input type="color" name="color" id="colorAdministrativeAllTextStroke" class="setColor text stroke featureTypeadministrative" value="#777777">
+                                        <label for="colorAdministrativeAllTextStroke">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeAllTextStroke" id="visibilityAdministrativeAllTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrative">
                                         <label for="visibilityAdministrativeAllTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeAllTextStroke" id="visibilityAdministrativeAllTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrative" checked="checked">
@@ -162,8 +162,8 @@
                                     </div>
                                     
                                     <div class="weight container">
-                                        <input type="number" name="weight" id="weightTextStroke" min="0" class="setWeight text stroke featureTypeadministrative">
-                                        <label for="weightTextStroke">weight</label>
+                                        <input type="number" name="weight" id="weightAdministrativeAllTextStroke" min="0" class="setWeight text stroke featureTypeadministrative">
+                                        <label for="weightAdministrativeAllTextStroke">weight</label>
                                     </div>
                                 </fieldset
                             </fieldset>
@@ -183,7 +183,7 @@
                                         <label for="colorGeometryFillAdministrativeCountry">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeCountryGeometryFill" id="visibilityAdministrativeCountryGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrativeCountry">
                                         <label for="visibilityAdministrativeCountryGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeCountryGeometryFill" id="visibilityAdministrativeCountryGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrativeCountry" checked="checked">
@@ -203,7 +203,7 @@
                                         <label for="colorGeometryStrokeAdministrativeCountry">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeCountryGeometryStroke" id="visibilityAdministrativeCountryGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeCountry">
                                         <label for="visibilityAdministrativeCountryGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeCountryGeometryStroke" id="visibilityAdministrativeCountryGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeCountry" checked="checked">
@@ -227,7 +227,7 @@
                                         <label for="colorTextFillAdministrativeCountry">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeCountryTextFill" id="visibilityAdministrativeCountryTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeCountry">
                                         <label for="visibilityAdministrativeCountryTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeCountryTextFill" id="visibilityAdministrativeCountryTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeCountry" checked="checked">
@@ -247,7 +247,7 @@
                                         <label for="colorTextStrokeAdministrativeCountry">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeCountryTextStroke" id="visibilityAdministrativeCountryTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeCountry">
                                         <label for="visibilityAdministrativeCountryTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeCountryTextStroke" id="visibilityAdministrativeCountryTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeCountry" checked="checked">
@@ -278,7 +278,7 @@
                                         <label for="colorGeometryFillAdministrativeLand_parcel">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLand_parcelGeometryFill" id="visibilityAdministrativeLand_parcelGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrativeLand_parcel">
                                         <label for="visibilityAdministrativeLand_parcelGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLand_parcelGeometryFill" id="visibilityAdministrativeLand_parcelGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrativeLand_parcel" checked="checked">
@@ -298,7 +298,7 @@
                                         <label for="colorGeometryStrokeAdministrativeLand_parcel">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeLand_parcel">
                                         <label for="visibilityAdministrativeLand_parcelGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeLand_parcel" checked="checked">
@@ -322,7 +322,7 @@
                                         <label for="colorTextFillAdministrativeLand_parcel">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLand_parcelTextFill" id="visibilityAdministrativeLand_parcelTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeLand_parcel">
                                         <label for="visibilityAdministrativeLand_parcelTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLand_parcelTextFill" id="visibilityAdministrativeLand_parcelTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeLand_parcel" checked="checked">
@@ -342,7 +342,7 @@
                                         <label for="colorTextStrokeAdministrativeLand_parcel">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLand_parcelTextStroke" id="visibilityAdministrativeLand_parcelTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeLand_parcel">
                                         <label for="visibilityAdministrativeLand_parcelTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLand_parcelTextStroke" id="visibilityAdministrativeLand_parcelTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeLand_parcel" checked="checked">
@@ -371,7 +371,7 @@
                                         <label for="colorGeometryFillAdministrativeLocality">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLocalityGeometryFill" id="visibilityAdministrativeLocalityGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrativeLocality">
                                         <label for="visibilityAdministrativeLocalityGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLocalityGeometryFill" id="visibilityAdministrativeLocalityGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrativeLocality" checked="checked">
@@ -391,7 +391,7 @@
                                         <label for="colorGeometryStrokeAdministrativeLocality">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLocalityGeometryStroke" id="visibilityAdministrativeLocalityGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeLocality">
                                         <label for="visibilityAdministrativeLocalityGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLocalityGeometryStroke" id="visibilityAdministrativeLocalityGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeLocality" checked="checked">
@@ -415,7 +415,7 @@
                                         <label for="colorTextFillAdministrativeLocality">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLocalityTextFill" id="visibilityAdministrativeLocalityTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeLocality">
                                         <label for="visibilityAdministrativeLocalityTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLocalityTextFill" id="visibilityAdministrativeLocalityTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeLocality" checked="checked">
@@ -435,7 +435,7 @@
                                         <label for="colorTextStrokeAdministrativeLocality">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeLocalityTextStroke" id="visibilityAdministrativeLocalityTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeLocality">
                                         <label for="visibilityAdministrativeLocalityTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeLocalityTextStroke" id="visibilityAdministrativeLocalityTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeLocality" checked="checked">
@@ -463,7 +463,7 @@
                                         <label for="colorGeometryFillAdministrativeNeighborhood">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodGeometryFill" id="visibilityAdministrativeNeighborhoodGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrativeNeighborhood">
                                         <label for="visibilityAdministrativeNeighborhoodGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodGeometryFill" id="visibilityAdministrativeNeighborhoodGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrativeNeighborhood" checked="checked">
@@ -483,7 +483,7 @@
                                         <label for="colorGeometryStrokeAdministrativeNeighborhood">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodGeometryStroke" id="visibilityAdministrativeNeighborhoodGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeNeighborhood">
                                         <label for="visibilityAdministrativeNeighborhoodGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodGeometryStroke" id="visibilityAdministrativeNeighborhoodGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeNeighborhood" checked="checked">
@@ -507,7 +507,7 @@
                                         <label for="colorTextFillAdministrativeNeighborhood">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodTextFill" id="visibilityAdministrativeNeighborhoodTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeNeighborhood">
                                         <label for="visibilityAdministrativeNeighborhoodTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodTextFill" id="visibilityAdministrativeNeighborhoodTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeNeighborhood" checked="checked">
@@ -527,7 +527,7 @@
                                         <label for="colorTextStrokeAdministrativeNeighborhood">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodTextStroke" id="visibilityAdministrativeNeighborhoodTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeNeighborhood">
                                         <label for="visibilityAdministrativeNeighborhoodTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeNeighborhoodTextStroke" id="visibilityAdministrativeNeighborhoodTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeNeighborhood" checked="checked">
@@ -556,7 +556,7 @@
                                         <label for="colorGeometryFillAdministrativeProvince">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeProvinceGeometryFill" id="visibilityAdministrativeProvinceGeometryFillON" value="on" class="setVisibility geometry fill on featureTypeadministrativeProvince">
                                         <label for="visibilityAdministrativeProvinceGeometryFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeProvinceGeometryFill" id="visibilityAdministrativeProvinceGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypeadministrativeProvince" checked="checked">
@@ -576,7 +576,7 @@
                                         <label for="colorGeometryStrokeAdministrativeProvince">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeProvinceGeometryStroke" id="visibilityAdministrativeProvinceGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeProvince">
                                         <label for="visibilityAdministrativeProvinceGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeProvinceGeometryStroke" id="visibilityAdministrativeProvinceGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeProvince" checked="checked">
@@ -600,7 +600,7 @@
                                         <label for="colorTextFillAdministrativeProvince">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeProvinceTextFill" id="visibilityAdministrativeProvinceTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeProvince">
                                         <label for="visibilityAdministrativeProvinceTextFillON">on</label>
                                         <input type="radio" name="visibilityAdministrativeProvinceTextFill" id="visibilityAdministrativeProvinceTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeProvince" checked="checked">
@@ -620,7 +620,7 @@
                                         <label for="colorTextStrokeAdministrativeProvince">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityAdministrativeProvinceTextStroke" id="visibilityAdministrativeProvinceTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeProvince">
                                         <label for="visibilityAdministrativeProvinceTextStrokeON">on</label>
                                         <input type="radio" name="visibilityAdministrativeProvinceTextStroke" id="visibilityAdministrativeProvinceTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeProvince" checked="checked">
@@ -658,7 +658,7 @@
                                         <label for="colorGeometryFillLandscape">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeGeometryFill" id="visibilityLandscapeGeometryFillON" value="on" class="setVisibility geometry fill on featureTypelandscape">
                                         <label for="visibilityLandscapeGeometryFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeGeometryFill" id="visibilityLandscapeGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypelandscape" checked="checked">
@@ -678,7 +678,7 @@
                                         <label for="colorGeometryStrokeLandscape">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeGeometryStroke" id="visibilityLandscapeGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypelandscape">
                                         <label for="visibilityLandscapeGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeGeometryStroke" id="visibilityLandscapeGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypelandscape" checked="checked">
@@ -702,7 +702,7 @@
                                         <label for="colorTextFillLandscape">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeTextFill" id="visibilityLandscapeTextFillON" value="on" class="setVisibility text fill on featureTypelandscape">
                                         <label for="visibilityLandscapeTextFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeTextFill" id="visibilityLandscapeTextFillOFF" value="off" class="setVisibility text fill off featureTypelandscape" checked="checked">
@@ -722,7 +722,7 @@
                                         <label for="colorTextStrokeLandscape">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeTextStroke" id="visibilityLandscapeTextStrokeON" value="on" class="setVisibility text stroke on featureTypelandscape">
                                         <label for="visibilityLandscapeTextStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeTextStroke" id="visibilityLandscapeTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypelandscape" checked="checked">
@@ -752,7 +752,7 @@
                                         <label for="colorGeometryFillLandscapeMan_made">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeMan_madeGeometryFill" id="visibilityLandscapeMan_madeGeometryFillON" value="on" class="setVisibility geometry fill on featureTypelandscapeMan_made">
                                         <label for="visibilityLandscapeMan_madeGeometryFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeMan_madeGeometryFill" id="visibilityLandscapeMan_madeGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypelandscapeMan_made" checked="checked">
@@ -772,7 +772,7 @@
                                         <label for="colorGeometryStrokeLandscapeMan_made">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeMan_madeGeometryStroke" id="visibilityLandscapeMan_madeGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypelandscapeMan_made">
                                         <label for="visibilityLandscapeMan_madeGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeMan_madeGeometryStroke" id="visibilityLandscapeMan_madeGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypelandscapeMan_made" checked="checked">
@@ -796,7 +796,7 @@
                                         <label for="colorTextFillLandscapeMan_made">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeMan_madeTextFill" id="visibilityLandscapeMan_madeTextFillON" value="on" class="setVisibility text fill on featureTypelandscapeMan_made">
                                         <label for="visibilityLandscapeMan_madeTextFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeMan_madeTextFill" id="visibilityLandscapeMan_madeTextFillOFF" value="off" class="setVisibility text fill off featureTypelandscapeMan_made" checked="checked">
@@ -816,7 +816,7 @@
                                         <label for="colorTextStrokeLandscapeMan_made">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeMan_madeTextStroke" id="visibilityLandscapeMan_madeTextStrokeON" value="on" class="setVisibility text stroke on featureTypelandscapeMan_made">
                                         <label for="visibilityLandscapeMan_madeTextStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeMan_madeTextStroke" id="visibilityLandscapeMan_madeTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypelandscapeMan_made" checked="checked">
@@ -847,7 +847,7 @@
                                         <label for="colorGeometryFillLandscapeNatural">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalGeometryFill" id="visibilityLandscapeNaturalGeometryFillON" value="on" class="setVisibility geometry fill on featureTypelandscapeNatural">
                                         <label for="visibilityLandscapeNaturalGeometryFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalGeometryFill" id="visibilityLandscapeNaturalGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypelandscapeNatural" checked="checked">
@@ -867,7 +867,7 @@
                                         <label for="colorGeometryStrokeLandscapeNatural">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalGeometryStroke" id="visibilityLandscapeNaturalGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypelandscapeNatural">
                                         <label for="visibilityLandscapeNaturalGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalGeometryStroke" id="visibilityLandscapeNaturalGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypelandscapeNatural" checked="checked">
@@ -891,7 +891,7 @@
                                         <label for="colorTextFillLandscapeNatural">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTextFill" id="visibilityLandscapeNaturalTextFillON" value="on" class="setVisibility text fill on featureTypelandscapeNatural">
                                         <label for="visibilityLandscapeNaturalTextFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTextFill" id="visibilityLandscapeNaturalTextFillOFF" value="off" class="setVisibility text fill off featureTypelandscapeNatural" checked="checked">
@@ -911,7 +911,7 @@
                                         <label for="colorTextStrokeLandscapeNatural">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTextStroke" id="visibilityLandscapeNaturalTextStrokeON" value="on" class="setVisibility text stroke on featureTypelandscapeNatural">
                                         <label for="visibilityLandscapeNaturalTextStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTextStroke" id="visibilityLandscapeNaturalTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypelandscapeNatural" checked="checked">
@@ -942,7 +942,7 @@
                                         <label for="colorGeometryFillLandscapeNaturalLandcover">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverGeometryFill" id="visibilityLandscapeNaturalLandcoverGeometryFillON" value="on" class="setVisibility geometry fill on featureTypelandscapeNaturalLandcover">
                                         <label for="visibilityLandscapeNaturalLandcoverGeometryFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverGeometryFill" id="visibilityLandscapeNaturalLandcoverGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypelandscapeNaturalLandcover" checked="checked">
@@ -962,7 +962,7 @@
                                         <label for="colorGeometryStrokeLandscapeNaturalLandcover">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverGeometryStroke" id="visibilityLandscapeNaturalLandcoverGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypelandscapeNaturalLandcover">
                                         <label for="visibilityLandscapeNaturalLandcoverGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverGeometryStroke" id="visibilityLandscapeNaturalLandcoverGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypelandscapeNaturalLandcover" checked="checked">
@@ -986,7 +986,7 @@
                                         <label for="colorTextFillLandscapeNaturalLandcover">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverTextFill" id="visibilityLandscapeNaturalLandcoverTextFillON" value="on" class="setVisibility text fill on featureTypelandscapeNaturalLandcover">
                                         <label for="visibilityLandscapeNaturalLandcoverTextFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverTextFill" id="visibilityLandscapeNaturalLandcoverTextFillOFF" value="off" class="setVisibility text fill off featureTypelandscapeNaturalLandcover" checked="checked">
@@ -1006,7 +1006,7 @@
                                         <label for="colorTextStrokeLandscapeNaturalLandcover">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverTextStroke" id="visibilityLandscapeNaturalLandcoverTextStrokeON" value="on" class="setVisibility text stroke on featureTypelandscapeNaturalLandcover">
                                         <label for="visibilityLandscapeNaturalLandcoverTextStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalLandcoverTextStroke" id="visibilityLandscapeNaturalLandcoverTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypelandscapeNaturalLandcover" checked="checked">
@@ -1037,7 +1037,7 @@
                                         <label for="colorGeometryFillLandscapeNaturalTerrain">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainGeometryFill" id="visibilityLandscapeNaturalTerrainGeometryFillON" value="on" class="setVisibility geometry fill on featureTypelandscapeNaturalTerrain">
                                         <label for="visibilityLandscapeNaturalTerrainGeometryFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainGeometryFill" id="visibilityLandscapeNaturalTerrainGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypelandscapeNaturalTerrain" checked="checked">
@@ -1057,7 +1057,7 @@
                                         <label for="colorGeometryStrokeLandscapeNaturalTerrain">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainGeometryStroke" id="visibilityLandscapeNaturalTerrainGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypelandscapeNaturalTerrain">
                                         <label for="visibilityLandscapeNaturalTerrainGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainGeometryStroke" id="visibilityLandscapeNaturalTerrainGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypelandscapeNaturalTerrain" checked="checked">
@@ -1081,7 +1081,7 @@
                                         <label for="colorTextFillLandscapeNaturalTerrain">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainTextFill" id="visibilityLandscapeNaturalTerrainTextFillON" value="on" class="setVisibility text fill on featureTypelandscapeNaturalTerrain">
                                         <label for="visibilityLandscapeNaturalTerrainTextFillON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainTextFill" id="visibilityLandscapeNaturalTerrainTextFillOFF" value="off" class="setVisibility text fill off featureTypelandscapeNaturalTerrain" checked="checked">
@@ -1101,7 +1101,7 @@
                                         <label for="colorTextStrokeLandscapeNaturalTerrain">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainTextStroke" id="visibilityLandscapeNaturalTerrainTextStrokeON" value="on" class="setVisibility text stroke on featureTypelandscapeNaturalTerrain">
                                         <label for="visibilityLandscapeNaturalTerrainTextStrokeON">on</label>
                                         <input type="radio" name="visibilityLandscapeNaturalTerrainTextStroke" id="visibilityLandscapeNaturalTerrainTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypelandscapeNaturalTerrain" checked="checked">
@@ -1139,7 +1139,7 @@
                                         <label for="colorGeometryFillPoi">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoi">
                                         <label for="visibilityPoiGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoi" checked="checked">
@@ -1159,7 +1159,7 @@
                                         <label for="colorGeometryStrokePoi">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGeometryStroke" id="visibilityPoiGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoi">
                                         <label for="visibilityPoiGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiGeometryStroke" id="visibilityPoiGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoi" checked="checked">
@@ -1183,7 +1183,7 @@
                                         <label for="colorTextFillPoi">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillON" value="on" class="setVisibility text fill on featureTypepoi">
                                         <label for="visibilityPoiTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillOFF" value="off" class="setVisibility text fill off featureTypepoi" checked="checked">
@@ -1203,7 +1203,7 @@
                                         <label for="colorTextStrokePoi">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoi">
                                         <label for="visibilityPoiTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoi" checked="checked">
@@ -1234,7 +1234,7 @@
                                         <label for="colorGeometryFillPoiAttraction">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiAttraction">
                                         <label for="visibilityPoiAttractionGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiAttraction" checked="checked">
@@ -1254,7 +1254,7 @@
                                         <label for="colorGeometryStrokePoiAttraction">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiAttractionGeometryStroke" id="visibilityPoiAttractionGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiAttraction">
                                         <label for="visibilityPoiAttractionGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiAttractionGeometryStroke" id="visibilityPoiAttractionGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiAttraction" checked="checked">
@@ -1278,7 +1278,7 @@
                                         <label for="colorTextFillPoiAttraction">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillON" value="on" class="setVisibility text fill on featureTypepoiAttraction">
                                         <label for="visibilityPoiAttractionTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiAttraction" checked="checked">
@@ -1298,7 +1298,7 @@
                                         <label for="colorTextStrokePoiAttraction">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiAttraction">
                                         <label for="visibilityPoiAttractionTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiAttraction" checked="checked">
@@ -1329,7 +1329,7 @@
                                         <label for="colorGeometryFillPoiBusiness">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiBusiness">
                                         <label for="visibilityPoiBusinessGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiBusiness" checked="checked">
@@ -1349,7 +1349,7 @@
                                         <label for="colorGeometryStrokePoiBusiness">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiBusinessGeometryStroke" id="visibilityPoiBusinessGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiBusiness">
                                         <label for="visibilityPoiBusinessGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiBusinessGeometryStroke" id="visibilityPoiBusinessGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiBusiness" checked="checked">
@@ -1373,7 +1373,7 @@
                                         <label for="colorTextFillPoiBusiness">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillON" value="on" class="setVisibility text fill on featureTypepoiBusiness">
                                         <label for="visibilityPoiBusinessTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiBusiness" checked="checked">
@@ -1393,7 +1393,7 @@
                                         <label for="colorTextStrokePoiBusiness">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiBusiness">
                                         <label for="visibilityPoiBusinessTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiBusiness" checked="checked">
@@ -1424,7 +1424,7 @@
                                         <label for="colorGeometryFillPoiGovernment">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiGovernment">
                                         <label for="visibilityPoiGovernmentGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiGovernment" checked="checked">
@@ -1444,7 +1444,7 @@
                                         <label for="colorGeometryStrokePoiGovernment">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGovernmentGeometryStroke" id="visibilityPoiGovernmentGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiGovernment">
                                         <label for="visibilityPoiGovernmentGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiGovernmentGeometryStroke" id="visibilityPoiGovernmentGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiGovernment" checked="checked">
@@ -1468,7 +1468,7 @@
                                         <label for="colorTextFillPoiGovernment">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillON" value="on" class="setVisibility text fill on featureTypepoiGovernment">
                                         <label for="visibilityPoiGovernmentTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiGovernment" checked="checked">
@@ -1488,7 +1488,7 @@
                                         <label for="colorTextStrokePoiGovernment">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiGovernment">
                                         <label for="visibilityPoiGovernmentTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiGovernment" checked="checked">
@@ -1519,7 +1519,7 @@
                                         <label for="colorGeometryFillPoiMedical">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiMedical">
                                         <label for="visibilityPoiMedicalGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiMedical" checked="checked">
@@ -1539,7 +1539,7 @@
                                         <label for="colorGeometryStrokePoiMedical">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiMedicalGeometryStroke" id="visibilityPoiMedicalGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiMedical">
                                         <label for="visibilityPoiMedicalGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiMedicalGeometryStroke" id="visibilityPoiMedicalGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiMedical" checked="checked">
@@ -1563,7 +1563,7 @@
                                         <label for="colorTextFillPoiMedical">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillON" value="on" class="setVisibility text fill on featureTypepoiMedical">
                                         <label for="visibilityPoiMedicalTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiMedical" checked="checked">
@@ -1583,7 +1583,7 @@
                                         <label for="colorTextStrokePoiMedical">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiMedical">
                                         <label for="visibilityPoiMedicalTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiMedical" checked="checked">
@@ -1614,7 +1614,7 @@
                                         <label for="colorGeometryFillPoiPark">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPark">
                                         <label for="visibilityPoiParkGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPark" checked="checked">
@@ -1634,7 +1634,7 @@
                                         <label for="colorGeometryStrokePoiPark">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiParkGeometryStroke" id="visibilityPoiParkGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiPark">
                                         <label for="visibilityPoiParkGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiParkGeometryStroke" id="visibilityPoiParkGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiPark" checked="checked">
@@ -1658,7 +1658,7 @@
                                         <label for="colorTextFillPoiPark">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillON" value="on" class="setVisibility text fill on featureTypepoiPark">
                                         <label for="visibilityPoiParkTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPark" checked="checked">
@@ -1678,7 +1678,7 @@
                                         <label for="colorTextStrokePoiPark">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPark">
                                         <label for="visibilityPoiParkTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPark" checked="checked">
@@ -1709,7 +1709,7 @@
                                         <label for="colorGeometryFillPoiPlace_of_worship">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPlace_of_worship">
                                         <label for="visibilityPoiPlace_of_worshipGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPlace_of_worship" checked="checked">
@@ -1729,7 +1729,7 @@
                                         <label for="colorGeometryStrokePoiPlace_of_worship">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiPlace_of_worshipGeometryStroke" id="visibilityPoiPlace_of_worshipGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiPlace_of_worship">
                                         <label for="visibilityPoiPlace_of_worshipGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiPlace_of_worshipGeometryStroke" id="visibilityPoiPlace_of_worshipGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiPlace_of_worship" checked="checked">
@@ -1753,7 +1753,7 @@
                                         <label for="colorTextFillPoiPlace_of_worship">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillON" value="on" class="setVisibility text fill on featureTypepoiPlace_of_worship">
                                         <label for="visibilityPoiPlace_of_worshipTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPlace_of_worship" checked="checked">
@@ -1773,7 +1773,7 @@
                                         <label for="colorTextStrokePoiPlace_of_worship">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPlace_of_worship">
                                         <label for="visibilityPoiPlace_of_worshipTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPlace_of_worship" checked="checked">
@@ -1804,7 +1804,7 @@
                                         <label for="colorGeometryFillPoiSchool">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSchool">
                                         <label for="visibilityPoiSchoolGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSchool" checked="checked">
@@ -1824,7 +1824,7 @@
                                         <label for="colorGeometryStrokePoiSchool">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSchoolGeometryStroke" id="visibilityPoiSchoolGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiSchool">
                                         <label for="visibilityPoiSchoolGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiSchoolGeometryStroke" id="visibilityPoiSchoolGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiSchool" checked="checked">
@@ -1848,7 +1848,7 @@
                                         <label for="colorTextFillPoiSchool">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillON" value="on" class="setVisibility text fill on featureTypepoiSchool">
                                         <label for="visibilityPoiSchoolTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSchool" checked="checked">
@@ -1868,7 +1868,7 @@
                                         <label for="colorTextStrokePoiSchool">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSchool">
                                         <label for="visibilityPoiSchoolTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSchool" checked="checked">
@@ -1899,7 +1899,7 @@
                                         <label for="colorGeometryFillPoiSports_complex">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSports_complex">
                                         <label for="visibilityPoiSports_complexGeometryFillON">on</label>
                                         <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSports_complex" checked="checked">
@@ -1919,7 +1919,7 @@
                                         <label for="colorGeometryStrokePoiSports_complex">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSports_complexGeometryStroke" id="visibilityPoiSports_complexGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypepoiSports_complex">
                                         <label for="visibilityPoiSports_complexGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiSports_complexGeometryStroke" id="visibilityPoiSports_complexGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypepoiSports_complex" checked="checked">
@@ -1943,7 +1943,7 @@
                                         <label for="colorTextFillPoiSports_complex">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillON" value="on" class="setVisibility text fill on featureTypepoiSports_complex">
                                         <label for="visibilityPoiSports_complexTextFillON">on</label>
                                         <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSports_complex" checked="checked">
@@ -1963,7 +1963,7 @@
                                         <label for="colorTextStrokePoiSports_complex">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSports_complex">
                                         <label for="visibilityPoiSports_complexTextStrokeON">on</label>
                                         <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSports_complex" checked="checked">
@@ -2001,7 +2001,7 @@
                                         <label for="colorGeometryFillRoad">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadGeometryFill" id="visibilityRoadGeometryFillON" value="on" class="setVisibility geometry fill on featureTyperoad">
                                         <label for="visibilityRoadGeometryFillON">on</label>
                                         <input type="radio" name="visibilityRoadGeometryFill" id="visibilityRoadGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTyperoad" checked="checked">
@@ -2021,7 +2021,7 @@
                                         <label for="colorGeometryStrokeRoad">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadGeometryStroke" id="visibilityRoadGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTyperoad">
                                         <label for="visibilityRoadGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadGeometryStroke" id="visibilityRoadGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTyperoad" checked="checked">
@@ -2045,7 +2045,7 @@
                                         <label for="colorTextFillRoad">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadTextFill" id="visibilityRoadTextFillON" value="on" class="setVisibility text fill on featureTyperoad">
                                         <label for="visibilityRoadTextFillON">on</label>
                                         <input type="radio" name="visibilityRoadTextFill" id="visibilityRoadTextFillOFF" value="off" class="setVisibility text fill off featureTyperoad" checked="checked">
@@ -2065,7 +2065,7 @@
                                         <label for="colorTextStrokeRoad">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadTextStroke" id="visibilityRoadTextStrokeON" value="on" class="setVisibility text stroke on featureTyperoad">
                                         <label for="visibilityRoadTextStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadTextStroke" id="visibilityRoadTextStrokeOFF" value="off" class="setVisibility text stroke off featureTyperoad" checked="checked">
@@ -2078,7 +2078,26 @@
                                     </div>
                                 </fieldset
                             </fieldset>
-                            
+                            <fieldset>
+                                    <legend>icon</legend>
+                                    <div class="color container">
+                                        <input type="color" name="color" id="colorIconRoad" class="setColor icon featureTyperoad" value="#777777">
+                                        <label for="colorIconRoad">color</label>
+                                    </div>
+                                    
+                                    <div class="visibility container switchOnOff">
+                                        <input type="radio" name="visibilityRoadIcon" id="visibilityRoadIconON" value="on" class="setVisibility icon on featureTyperoad">
+                                        <label for="visibilityRoadIconON">on</label>
+                                        <input type="radio" name="visibilityRoadIcon" id="visibilityRoadIconOFF" value="off" class="setVisibility icon off featureTyperoad" checked="checked">
+                                        <label for="visibilityRoadIconOFF">off</label>
+                                    </div>
+                                    
+                                    <div class="weight container">
+                                        <input type="number" name="weight" id="weightIconRoad" min="0" class="setWeight icon featureTyperoad">
+                                        <label for="weightIconRoad">weight</label>
+                                    </div>
+                            </fieldset>
+
                         </form>
                     </li>
                      
@@ -2096,7 +2115,7 @@
                                         <label for="colorGeometryFillRoadArterial">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadArterialGeometryFill" id="visibilityRoadArterialGeometryFillON" value="on" class="setVisibility geometry fill on featureTyperoadArterial">
                                         <label for="visibilityRoadArterialGeometryFillON">on</label>
                                         <input type="radio" name="visibilityRoadArterialGeometryFill" id="visibilityRoadArterialGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTyperoadArterial" checked="checked">
@@ -2116,7 +2135,7 @@
                                         <label for="colorGeometryStrokeRoadArterial">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadArterialGeometryStroke" id="visibilityRoadArterialGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTyperoadArterial">
                                         <label for="visibilityRoadArterialGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadArterialGeometryStroke" id="visibilityRoadArterialGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTyperoadArterial" checked="checked">
@@ -2140,7 +2159,7 @@
                                         <label for="colorTextFillRoadArterial">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadArterialTextFill" id="visibilityRoadArterialTextFillON" value="on" class="setVisibility text fill on featureTyperoadArterial">
                                         <label for="visibilityRoadArterialTextFillON">on</label>
                                         <input type="radio" name="visibilityRoadArterialTextFill" id="visibilityRoadArterialTextFillOFF" value="off" class="setVisibility text fill off featureTyperoadArterial" checked="checked">
@@ -2160,7 +2179,7 @@
                                         <label for="colorTextStrokeRoadArterial">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadArterialTextStroke" id="visibilityRoadArterialTextStrokeON" value="on" class="setVisibility text stroke on featureTyperoadArterial">
                                         <label for="visibilityRoadArterialTextStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadArterialTextStroke" id="visibilityRoadArterialTextStrokeOFF" value="off" class="setVisibility text stroke off featureTyperoadArterial" checked="checked">
@@ -2192,7 +2211,7 @@
                                         <label for="colorGeometryFillRoadHighway">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayGeometryFill" id="visibilityRoadHighwayGeometryFillON" value="on" class="setVisibility geometry fill on featureTyperoadHighway">
                                         <label for="visibilityRoadHighwayGeometryFillON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayGeometryFill" id="visibilityRoadHighwayGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTyperoadHighway" checked="checked">
@@ -2212,7 +2231,7 @@
                                         <label for="colorGeometryStrokeRoadHighway">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayGeometryStroke" id="visibilityRoadHighwayGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTyperoadHighway">
                                         <label for="visibilityRoadHighwayGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayGeometryStroke" id="visibilityRoadHighwayGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTyperoadHighway" checked="checked">
@@ -2236,7 +2255,7 @@
                                         <label for="colorTextFillRoadHighway">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayTextFill" id="visibilityRoadHighwayTextFillON" value="on" class="setVisibility text fill on featureTyperoadHighway">
                                         <label for="visibilityRoadHighwayTextFillON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayTextFill" id="visibilityRoadHighwayTextFillOFF" value="off" class="setVisibility text fill off featureTyperoadHighway" checked="checked">
@@ -2256,7 +2275,7 @@
                                         <label for="colorTextStrokeRoadHighway">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayTextStroke" id="visibilityRoadHighwayTextStrokeON" value="on" class="setVisibility text stroke on featureTyperoadHighway">
                                         <label for="visibilityRoadHighwayTextStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayTextStroke" id="visibilityRoadHighwayTextStrokeOFF" value="off" class="setVisibility text stroke off featureTyperoadHighway" checked="checked">
@@ -2267,9 +2286,28 @@
                                         <input type="number" name="weight" id="weightTextStrokeRoadHighway" min="0" class="setWeight text stroke featureTyperoadHighway">
                                         <label for="weightTextStrokeRoadHighway">weight</label>
                                     </div>
-                                </fieldset
+                                </fieldset>
                             </fieldset>
-                            
+                            <fieldset>
+                                    <legend>icon</legend>
+                                    <div class="color container">
+                                        <input type="color" name="color" id="colorIconRoadHighway" class="setColor icon featureTyperoadHighway" value="#777777">
+                                        <label for="colorIconRoadHighway">color</label>
+                                    </div>
+                                    
+                                    <div class="visibility container switchOnOff">
+                                        <input type="radio" name="visibilityRoadHighwayIcon" id="visibilityRoadHighwayIconON" value="on" class="setVisibility icon on featureTyperoadHighway">
+                                        <label for="visibilityRoadHighwayIconON">on</label>
+                                        <input type="radio" name="visibilityRoadHighwayIcon" id="visibilityRoadHighwayIconOFF" value="off" class="setVisibility icon off featureTyperoadHighway" checked="checked">
+                                        <label for="visibilityRoadHighwayIconOFF">off</label>
+                                    </div>
+                                    
+                                    <div class="weight container">
+                                        <input type="number" name="weight" id="weightIconRoadHighway" min="0" class="setWeight icon featureTyperoadHighway">
+                                        <label for="weightIconRoadHighway">weight</label>
+                                    </div>
+                            </fieldset>
+
                         </form>
                     </li>
                      
@@ -2286,7 +2324,7 @@
                                         <label for="colorGeometryFillRoadHighwayControlled_access">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessGeometryFill" id="visibilityRoadHighwayControlled_accessGeometryFillON" value="on" class="setVisibility geometry fill on featureTyperoadHighwayControlled_access">
                                         <label for="visibilityRoadHighwayControlled_accessGeometryFillON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessGeometryFill" id="visibilityRoadHighwayControlled_accessGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTyperoadHighwayControlled_access" checked="checked">
@@ -2306,7 +2344,7 @@
                                         <label for="colorGeometryStrokeRoadHighwayControlled_access">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessGeometryStroke" id="visibilityRoadHighwayControlled_accessGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTyperoadHighwayControlled_access">
                                         <label for="visibilityRoadHighwayControlled_accessGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessGeometryStroke" id="visibilityRoadHighwayControlled_accessGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTyperoadHighwayControlled_access" checked="checked">
@@ -2330,7 +2368,7 @@
                                         <label for="colorTextFillRoadHighwayControlled_access">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessTextFill" id="visibilityRoadHighwayControlled_accessTextFillON" value="on" class="setVisibility text fill on featureTyperoadHighwayControlled_access">
                                         <label for="visibilityRoadHighwayControlled_accessTextFillON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessTextFill" id="visibilityRoadHighwayControlled_accessTextFillOFF" value="off" class="setVisibility text fill off featureTyperoadHighwayControlled_access" checked="checked">
@@ -2350,7 +2388,7 @@
                                         <label for="colorTextStrokeRoadHighwayControlled_access">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessTextStroke" id="visibilityRoadHighwayControlled_accessTextStrokeON" value="on" class="setVisibility text stroke on featureTyperoadHighwayControlled_access">
                                         <label for="visibilityRoadHighwayControlled_accessTextStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadHighwayControlled_accessTextStroke" id="visibilityRoadHighwayControlled_accessTextStrokeOFF" value="off" class="setVisibility text stroke off featureTyperoadHighwayControlled_access" checked="checked">
@@ -2362,6 +2400,26 @@
                                         <label for="weightTextStrokeRoadHighwayControlled_access">weight</label>
                                     </div>
                                 </fieldset
+                            </fieldset>
+
+                            <fieldset>
+                                    <legend>icon</legend>
+                                    <div class="color container">
+                                        <input type="color" name="color" id="colorIconRoadHighwayControlled_access" class="setColor icon featureTyperoadHighwayControlled_access" value="#777777">
+                                        <label for="colorIconRoadHighwayControlled_access">color</label>
+                                    </div>
+                                    
+                                    <div class="visibility container switchOnOff">
+                                        <input type="radio" name="visibilityRoadHighwayControlled_accessIcon" id="visibilityRoadHighwayControlled_accessIconON" value="on" class="setVisibility icon on featureTyperoadHighwayControlled_access">
+                                        <label for="visibilityRoadHighwayControlled_accessIconON">on</label>
+                                        <input type="radio" name="visibilityRoadHighwayControlled_accessIcon" id="visibilityRoadHighwayControlled_accessIconOFF" value="off" class="setVisibility icon off featureTyperoadHighwayControlled_access" checked="checked">
+                                        <label for="visibilityRoadHighwayControlled_accessIconOFF">off</label>
+                                    </div>
+                                    
+                                    <div class="weight container">
+                                        <input type="number" name="weight" id="weightIconRoadHighwayControlled_access" min="0" class="setWeight icon featureTyperoadHighwayControlled_access">
+                                        <label for="weightIconRoadHighwayControlled_access">weight</label>
+                                    </div>
                             </fieldset>
                             
                         </form>
@@ -2382,7 +2440,7 @@
                                         <label for="colorGeometryFillRoadLocal">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadLocalGeometryFill" id="visibilityRoadLocalGeometryFillON" value="on" class="setVisibility geometry fill on featureTyperoadLocal">
                                         <label for="visibilityRoadLocalGeometryFillON">on</label>
                                         <input type="radio" name="visibilityRoadLocalGeometryFill" id="visibilityRoadLocalGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTyperoadLocal" checked="checked">
@@ -2402,7 +2460,7 @@
                                         <label for="colorGeometryStrokeRoadLocal">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadLocalGeometryStroke" id="visibilityRoadLocalGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTyperoadLocal">
                                         <label for="visibilityRoadLocalGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadLocalGeometryStroke" id="visibilityRoadLocalGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTyperoadLocal" checked="checked">
@@ -2426,7 +2484,7 @@
                                         <label for="colorTextFillRoadLocal">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadLocalTextFill" id="visibilityRoadLocalTextFillON" value="on" class="setVisibility text fill on featureTyperoadLocal">
                                         <label for="visibilityRoadLocalTextFillON">on</label>
                                         <input type="radio" name="visibilityRoadLocalTextFill" id="visibilityRoadLocalTextFillOFF" value="off" class="setVisibility text fill off featureTyperoadLocal" checked="checked">
@@ -2446,7 +2504,7 @@
                                         <label for="colorTextStrokeRoadLocal">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityRoadLocalTextStroke" id="visibilityRoadLocalTextStrokeON" value="on" class="setVisibility text stroke on featureTyperoadLocal">
                                         <label for="visibilityRoadLocalTextStrokeON">on</label>
                                         <input type="radio" name="visibilityRoadLocalTextStroke" id="visibilityRoadLocalTextStrokeOFF" value="off" class="setVisibility text stroke off featureTyperoadLocal" checked="checked">
@@ -2482,7 +2540,7 @@
                                         <label for="colorGeometryFillTransit">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitGeometryFill" id="visibilityTransitGeometryFillON" value="on" class="setVisibility geometry fill on featureTypetransit">
                                         <label for="visibilityTransitGeometryFillON">on</label>
                                         <input type="radio" name="visibilityTransitGeometryFill" id="visibilityTransitGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypetransit" checked="checked">
@@ -2502,7 +2560,7 @@
                                         <label for="colorGeometryStrokeTransit">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitGeometryStroke" id="visibilityTransitGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypetransit">
                                         <label for="visibilityTransitGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitGeometryStroke" id="visibilityTransitGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypetransit" checked="checked">
@@ -2526,7 +2584,7 @@
                                         <label for="colorTextFillTransit">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitTextFill" id="visibilityTransitTextFillON" value="on" class="setVisibility text fill on featureTypetransit">
                                         <label for="visibilityTransitTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitTextFill" id="visibilityTransitTextFillOFF" value="off" class="setVisibility text fill off featureTypetransit" checked="checked">
@@ -2546,7 +2604,7 @@
                                         <label for="colorTextStrokeTransit">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitTextStroke" id="visibilityTransitTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransit">
                                         <label for="visibilityTransitTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitTextStroke" id="visibilityTransitTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransit" checked="checked">
@@ -2578,7 +2636,7 @@
                                         <label for="colorGeometryFillTransitLine">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitLineGeometryFill" id="visibilityTransitLineGeometryFillON" value="on" class="setVisibility geometry fill on featureTypetransitLine">
                                         <label for="visibilityTransitLineGeometryFillON">on</label>
                                         <input type="radio" name="visibilityTransitLineGeometryFill" id="visibilityTransitLineGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypetransitLine" checked="checked">
@@ -2598,7 +2656,7 @@
                                         <label for="colorGeometryStrokeTransitLine">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitLineGeometryStroke" id="visibilityTransitLineGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypetransitLine">
                                         <label for="visibilityTransitLineGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitLineGeometryStroke" id="visibilityTransitLineGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypetransitLine" checked="checked">
@@ -2622,7 +2680,7 @@
                                         <label for="colorTextFillTransitLine">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitLineTextFill" id="visibilityTransitLineTextFillON" value="on" class="setVisibility text fill on featureTypetransitLine">
                                         <label for="visibilityTransitLineTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitLineTextFill" id="visibilityTransitLineTextFillOFF" value="off" class="setVisibility text fill off featureTypetransitLine" checked="checked">
@@ -2642,7 +2700,7 @@
                                         <label for="colorTextStrokeTransitLine">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitLineTextStroke" id="visibilityTransitLineTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransitLine">
                                         <label for="visibilityTransitLineTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitLineTextStroke" id="visibilityTransitLineTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransitLine" checked="checked">
@@ -2673,7 +2731,7 @@
                                         <label for="colorGeometryFillTransitStation">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationGeometryFill" id="visibilityTransitStationGeometryFillON" value="on" class="setVisibility geometry fill on featureTypetransitStation">
                                         <label for="visibilityTransitStationGeometryFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationGeometryFill" id="visibilityTransitStationGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypetransitStation" checked="checked">
@@ -2693,7 +2751,7 @@
                                         <label for="colorGeometryStrokeTransitStation">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationGeometryStroke" id="visibilityTransitStationGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypetransitStation">
                                         <label for="visibilityTransitStationGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationGeometryStroke" id="visibilityTransitStationGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypetransitStation" checked="checked">
@@ -2717,7 +2775,7 @@
                                         <label for="colorTextFillTransitStation">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationTextFill" id="visibilityTransitStationTextFillON" value="on" class="setVisibility text fill on featureTypetransitStation">
                                         <label for="visibilityTransitStationTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationTextFill" id="visibilityTransitStationTextFillOFF" value="off" class="setVisibility text fill off featureTypetransitStation" checked="checked">
@@ -2737,7 +2795,7 @@
                                         <label for="colorTextStrokeTransitStation">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationTextStroke" id="visibilityTransitStationTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransitStation">
                                         <label for="visibilityTransitStationTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationTextStroke" id="visibilityTransitStationTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransitStation" checked="checked">
@@ -2767,7 +2825,7 @@
                                         <label for="colorGeometryFillTransitStationAirport">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationAirportGeometryFill" id="visibilityTransitStationAirportGeometryFillON" value="on" class="setVisibility geometry fill on featureTypetransitStationAirport">
                                         <label for="visibilityTransitStationAirportGeometryFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationAirportGeometryFill" id="visibilityTransitStationAirportGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypetransitStationAirport" checked="checked">
@@ -2787,7 +2845,7 @@
                                         <label for="colorGeometryStrokeTransitStationAirport">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationAirportGeometryStroke" id="visibilityTransitStationAirportGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypetransitStationAirport">
                                         <label for="visibilityTransitStationAirportGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationAirportGeometryStroke" id="visibilityTransitStationAirportGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypetransitStationAirport" checked="checked">
@@ -2811,7 +2869,7 @@
                                         <label for="colorTextFillTransitStationAirport">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationAirportTextFill" id="visibilityTransitStationAirportTextFillON" value="on" class="setVisibility text fill on featureTypetransitStationAirport">
                                         <label for="visibilityTransitStationAirportTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationAirportTextFill" id="visibilityTransitStationAirportTextFillOFF" value="off" class="setVisibility text fill off featureTypetransitStationAirport" checked="checked">
@@ -2831,7 +2889,7 @@
                                         <label for="colorTextStrokeTransitStationAirport">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationAirportTextStroke" id="visibilityTransitStationAirportTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransitStationAirport">
                                         <label for="visibilityTransitStationAirportTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationAirportTextStroke" id="visibilityTransitStationAirportTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransitStationAirport" checked="checked">
@@ -2859,7 +2917,7 @@
                                     <label for="colorIconTransitStationBus">color</label>
                                 </div>
                                 
-                                <div class="visibility container">
+                                <div class="visibility container switchOnOff">
                                     <input type="radio" name="visibilityTransitStationBusIcon" id="visibilityTransitStationBusIconON" value="on" class="setVisibility icon on featureTypetransitStationBus">
                                     <label for="visibilityTransitStationBusIconON">on</label>
                                     <input type="radio" name="visibilityTransitStationBusIcon" id="visibilityTransitStationBusIconOFF" value="off" class="setVisibility icon off featureTypetransitStationBus" checked="checked">
@@ -2881,7 +2939,7 @@
                                         <label for="colorTextFillTransitStationBus">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationBusTextFill" id="visibilityTransitStationBusTextFillON" value="on" class="setVisibility text fill on featureTypetransitStationBus">
                                         <label for="visibilityTransitStationBusTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationBusTextFill" id="visibilityTransitStationBusTextFillOFF" value="off" class="setVisibility text fill off featureTypetransitStationBus" checked="checked">
@@ -2901,7 +2959,7 @@
                                         <label for="colorTextStrokeTransitStationBus">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationBusTextStroke" id="visibilityTransitStationBusTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransitStationBus">
                                         <label for="visibilityTransitStationBusTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationBusTextStroke" id="visibilityTransitStationBusTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransitStationBus" checked="checked">
@@ -2929,7 +2987,7 @@
                                         <label for="colorIconTransitStationRail">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationRailIcon" id="visibilityTransitStationRailIconON" value="on" class="setVisibility icon on featureTypetransitStationRail">
                                         <label for="visibilityTransitStationRailIconON">on</label>
                                         <input type="radio" name="visibilityTransitStationRailIcon" id="visibilityTransitStationRailIconOFF" value="off" class="setVisibility icon off featureTypetransitStationRail" checked="checked">
@@ -2951,7 +3009,7 @@
                                         <label for="colorTextFillTransitStationRail">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationRailTextFill" id="visibilityTransitStationRailTextFillON" value="on" class="setVisibility text fill on featureTypetransitStationRail">
                                         <label for="visibilityTransitStationRailTextFillON">on</label>
                                         <input type="radio" name="visibilityTransitStationRailTextFill" id="visibilityTransitStationRailTextFillOFF" value="off" class="setVisibility text fill off featureTypetransitStationRail" checked="checked">
@@ -2971,7 +3029,7 @@
                                         <label for="colorTextStrokeTransitStationRail">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityTransitStationRailTextStroke" id="visibilityTransitStationRailTextStrokeON" value="on" class="setVisibility text stroke on featureTypetransitStationRail">
                                         <label for="visibilityTransitStationRailTextStrokeON">on</label>
                                         <input type="radio" name="visibilityTransitStationRailTextStroke" id="visibilityTransitStationRailTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypetransitStationRail" checked="checked">
@@ -3003,7 +3061,7 @@
                                         <label for="colorGeometryFillWater">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityWaterGeometryFill" id="visibilityWaterGeometryFillON" value="on" class="setVisibility geometry fill on featureTypewater">
                                         <label for="visibilityWaterGeometryFillON">on</label>
                                         <input type="radio" name="visibilityWaterGeometryFill" id="visibilityWaterGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypewater" checked="checked">
@@ -3023,7 +3081,7 @@
                                         <label for="colorGeometryStrokeWater">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityWaterGeometryStroke" id="visibilityWaterGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypewater">
                                         <label for="visibilityWaterGeometryStrokeON">on</label>
                                         <input type="radio" name="visibilityWaterGeometryStroke" id="visibilityWaterGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypewater" checked="checked">
@@ -3047,7 +3105,7 @@
                                         <label for="colorTextFillWater">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityWaterTextFill" id="visibilityWaterTextFillON" value="on" class="setVisibility text fill on featureTypewater">
                                         <label for="visibilityWaterTextFillON">on</label>
                                         <input type="radio" name="visibilityWaterTextFill" id="visibilityWaterTextFillOFF" value="off" class="setVisibility text fill off featureTypewater" checked="checked">
@@ -3067,7 +3125,7 @@
                                         <label for="colorTextStrokeWater">color</label>
                                     </div>
                                     
-                                    <div class="visibility container">
+                                    <div class="visibility container switchOnOff">
                                         <input type="radio" name="visibilityWaterTextStroke" id="visibilityWaterTextStrokeON" value="on" class="setVisibility text stroke on featureTypewater">
                                         <label for="visibilityWaterTextStrokeON">on</label>
                                         <input type="radio" name="visibilityWaterTextStroke" id="visibilityWaterTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypewater" checked="checked">
@@ -3097,39 +3155,3 @@
     
 </body>
 </html>
-
-<!-- <select name="feature" id="feature">
-                <option value="administrative">administrative areas</option> 
-                <option value="administrative.country">countries</option> 
-                <option value="administrative.land_parcel">land parcels</option> 
-                <option value="administrative.locality">localities</option> 
-                <option value="administrative.neighborhood">neighborhoods</option> 
-                <option value="administrative.province">provinces</option>
-                <option value="all">all selector types</option> 
-                <option value="landscape">landscapes</option> 
-                <option value="landscape.man_made">man made structures</option> 
-                <option value="landscape.natural"> natural features</option> 
-                <option value="landscape.natural.landcover">landcover</option>
-                <option value="landscape.natural.terrain">terrain</option>
-                <option value="poi">points of interest</option>
-                <option value="poi.attraction">attraction</option>
-                <option value="poi.business">business</option>
-                <option value="poi.government">government</option>
-                <option value="poi.medical">medical</option>
-                <option value="poi.park">park</option>
-                <option value="poi.place_of_worship">place_of_worship</option>
-                <option value="poi.school">school</option>
-                <option value="poi.sports_complex">sports_complex</option>
-                <option value="road">road</option>
-                <option value="road.arterial">arterial</option>
-                <option value="road.highway">highway</option>
-                <option value="road.highway.controlled_access"></option>
-                <option value="road.local">local</option>
-                <option value="transit">transit</option>
-                <option value="transit.line">line</option>
-                <option value="transit.station">station</option>
-                <option value="transit.station.airport">airport</option>
-                <option value="transit.station.bus">bus</option>
-                <option value="transit.station.rail">rail</option>
-                <option value="water">water</option>
-            </select> -->
