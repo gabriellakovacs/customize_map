@@ -48,6 +48,24 @@
                         <label for="lng">lng</label>
                         <br>
                         <input type="number" name="lng" id="lng" min="-180" max="180">
+                        <br>
+                        <label for="marker">marker</label>
+                        <br>
+                        <input type="number" name="marker" id="marker">
+                        <div class="marker container flip">
+                            <input type="radio" name="markerON" id="markerON" value="on" class="marker on">
+                            <label for="markerON">on</label>
+                            <input type="radio" name="markerOFF" id="markerOFF" value="off" class="marker off" checked="checked">
+                            <label for="markerOFF">off</label>
+                            <label for="markerLat">lat</label>
+                            <br>
+                            <input type="number" name="markerLat" id="markerLat" min="-90" max="90" disabled>
+                            <br>
+                            <label for="markerLng">lng</label>
+                            <br>
+                            <input type="number" name="markerLng" id="markerLng" min="-180" max="180" disabled>
+                            <br>
+                        </div>
                     </fieldset>
                 </form>
         
