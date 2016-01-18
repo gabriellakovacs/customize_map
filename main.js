@@ -235,6 +235,37 @@ for (var i = 0; i < labels.length; i++) {
 		};
 	}
 
+//functions to increment/decrement weight input
+function incrementWeight(weightInstance) {
+	if (Number(weightInstance.value) < 11) {
+		weightInstance.value = Number(weightInstance.value) + 1;
+	}
+}
+
+function decrementWeight(weightInstance) {
+	if (Number(weightInstance.value) > 1) {
+		weightInstance.value = Number(weightInstance.value) - 1;
+		}
+}
+
+for (var i=0; i < weightAddList.length; i++) {
+	weightAddList[i].onclick = function() {
+		var weightInstBelongingToChangedAdd = this.previousElementSibling;
+		incrementWeight(weightInstBelongingToChangedAdd);
+		weightInstBelongingToChangedAdd.onchange();
+	}
+}
+
+for (var i=0; i < weightSubList.length; i++) {
+	weightSubList[i].onclick = function() {
+		var weightInstBelongingToChangedSub = this.nextElementSibling;
+		decrementWeight(weightInstBelongingToChangedSub);
+		weightInstBelongingToChangedSub.onchange();
+	}
+}
+
+
+
 //function to change area`s color/visibility/weight based on user input
 
 function changeMapStyle(stylerType, InputList) {
