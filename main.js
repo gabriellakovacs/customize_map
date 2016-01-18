@@ -1,39 +1,43 @@
  function initialize() {
+ //VARIABLES
  //access input fields in BASIC menu
- 	var inputfieldWidth = document.getElementById('width');
- 	var inputfieldHeight = document.getElementById('height');
- 	var inputfieldZoom = document.getElementById('zoom');
- 	var inputfieldLat = document.getElementById('lat');
- 	var inputfieldLng = document.getElementById('lng');
- 	var inputfieldMarkerON = document.getElementById("markerON");
- 	var inputfieldMarkerOFF = document.getElementById("markerOFF");
- 	var inputfieldMarkerLat = document.getElementById('markerLat');
- 	var inputfieldMarkerLng = document.getElementById('markerLng');
-
+ 	var inputfieldWidth = document.getElementById('width'),
+ 		inputfieldHeight = document.getElementById('height'),
+ 		inputfieldZoom = document.getElementById('zoom'),
+ 		inputfieldLat = document.getElementById('lat'),
+ 		inputfieldLng = document.getElementById('lng'),
+ 		inputfieldMarkerON = document.getElementById("markerON"),
+ 		inputfieldMarkerOFF = document.getElementById("markerOFF"),
+ 		inputfieldMarkerLat = document.getElementById('markerLat'),
+ 		inputfieldMarkerLng = document.getElementById('markerLng');
 
  //access multiple level of menu items
- 	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap");
- 	var mainMenuOptionList = document.getElementsByClassName("mainMenuOption");
- 	var embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
+ 	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap"),
+ 		mainMenuOptionList = document.getElementsByClassName("mainMenuOption"),
+ 		embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
 
 //access input fields in custommization panel
- 	var setColorInputList = document.getElementsByClassName("setColor");
- 	var setWeightInputList = document.getElementsByClassName("setWeight");
- 	var setVisibilityInputList = document.getElementsByClassName("setVisibility");
- 	var labels = document.getElementsByTagName("LABEL")
+ 	var setColorInputList = document.getElementsByClassName("setColor"),
+ 		setWeightInputList = document.getElementsByClassName("setWeight"),
+ 		setVisibilityInputList = document.getElementsByClassName("setVisibility"),
+ 		labels = document.getElementsByTagName("LABEL"),
+ 		weightAddList = document.getElementsByClassName("add"),
+ 		weightSubList = document.getElementsByClassName("sub");
  
- //
+ //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
+ //put color labels with their belonging color inputs together
 
-    var colorLabelInputConnection = {},
+    var colorLabelInputDict = {},
     label;
 
-for (var i = 0; i < labels.length; i++) {
-    label = labels[i];
-    if (document.getElementById(label.htmlFor)) {
-        colorLabelInputConnection[label.htmlFor] = label;
-    }
-}	
+	for (var i = 0; i < labels.length; i++) {
+	    label = labels[i];
+	    if (document.getElementById(label.htmlFor)) {
+	        colorLabelInputDict[label.htmlFor] = label;
+	    }
+	}
 
+/*------------------------------------------------------------------------------------------------------------*/
 //setup the original styles and values for the map
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
@@ -224,11 +228,11 @@ for (var i = 0; i < labels.length; i++) {
 						var expandedItem = document.querySelectorAll(".embeddingLevel2.expand");
 
 						if (expandedItem.length>0) {
-							expandedItem[0].className = "embeddingLevel2 collapse"
+							expandedItem[0].className = "embeddingLevel2 customizationPanel collapse"
 						}
-						embeddingLevel2.className = "embeddingLevel2 expand";
+						embeddingLevel2.className = "embeddingLevel2 customizationPanel expand";
 					} else {
-						embeddingLevel2.className = "embeddingLevel2 collapse";
+						embeddingLevel2.className = "embeddingLevel2 customizationPanel collapse";
 					};
 				};
 		}
@@ -276,10 +280,10 @@ function changeMapStyle(stylerType, InputList) {
 
 //create styler object based on function`s input (styler type) and on input value given by the user
 					var stylerValue = this.value;
-					
+
 					if (stylerType === "color") {
 						var stylerObject = {color:stylerValue};
-						var associatedLabel = colorLabelInputConnection[this.id];
+						var associatedLabel = colorLabelInputDict[this.id];
 						associatedLabel.style.backgroundColor = stylerValue;
 					} else if (stylerType === "weight") {
 						var stylerObject = {weight:stylerValue};
