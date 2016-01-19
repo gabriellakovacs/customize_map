@@ -23,6 +23,9 @@
  		labels = document.getElementsByTagName("LABEL"),
  		weightAddList = document.getElementsByClassName("add"),
  		weightSubList = document.getElementsByClassName("sub");
+
+ //access code genarating elements
+ 	var codeContainer =  document.getElementById("codeContainer");
  
  //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
  //put color labels with their belonging color inputs together
@@ -43,16 +46,16 @@
     var mapOptions = {
         center: new google.maps.LatLng(47.5403, 19.0463),
         zoom: 5,
-		mapTypeId: google.maps.MapTypeId.ROADMAP //ROADMAP, SATELLITE, HYBRID, or TERRAIN
+		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	var map = new google.maps.Map(mapCanvas, mapOptions);
 
 	var originalStyle = [
 		{
-		featureType: 'road', //administrative, landscape, poi, road, transit, water
-		elementType: 'geometry', //geometry(.icon, .text), labels(.stroke, .fill), all 
+		featureType: 'road',
+		elementType: 'geometry',
 		stylers: [
-		{ color: '#FF7700' }//weight, visibility, color, hue, lightness, saturation
+		{ color: '#FF7700' }
 		]
 	}, {
 	    featureType: 'water',
@@ -65,7 +68,6 @@
 	    elementType: 'geometry',
 	    stylers: [
 	    { color: '#F09E56' }
-
 	    ]
 	}, {
 	    featureType: 'administrative.country',
@@ -228,11 +230,11 @@
 						var expandedItem = document.querySelectorAll(".embeddingLevel2.expand");
 
 						if (expandedItem.length>0) {
-							expandedItem[0].className = "embeddingLevel2 customizationPanel collapse"
+							expandedItem[0].className = "embeddingLevel2 customizationPanelContainer collapse"
 						}
-						embeddingLevel2.className = "embeddingLevel2 customizationPanel expand";
+						embeddingLevel2.className = "embeddingLevel2 customizationPanelContainer expand";
 					} else {
-						embeddingLevel2.className = "embeddingLevel2 customizationPanel collapse";
+						embeddingLevel2.className = "embeddingLevel2 customizationPanelContainer collapse";
 					};
 				};
 		}
@@ -352,7 +354,39 @@ changeMapStyle("visibility", setVisibilityInputList);
 //change the weight of selected area
 changeMapStyle("weight", setWeightInputList);
 
+//function that generates code based on user input
 
+ 
+
+codeContainer.onclick = function(){
+	var code ="";
+	for (style in originalStyle){
+		window.alert("style: " + style);
+		code = code + "{";
+		
+		for (styleElement in originalStyle[style]){
+			window.alert("styleElement: " + styleElement);
+			if (styleElement == "stylers") {
+				code = code + "\n" + "    " + styleElement + ": [";
+				for (listOfStyles in originalStyle[style][styleElement]) {
+					for (nameOfSTyler in originalStyle[style][styleElement][listOfStyles]) {
+						window.alert("inside if obj: " + nameOfSTyler + "value" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler]);
+						code = code + "\n" + "        "+ "{" + nameOfSTyler + ":" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler] + "}";
+					}
+				}
+				code = code + "\n" + "    " + "]";
+			} else {
+				code = code + "\n" + "    " + styleElement + ": " + "'" + originalStyle[style][styleElement] + "'" + ",";
+			}
+		}
+		code = code + "\n}";
+		if (style < originalStyle.length-1) {
+			code = code + ", "
+		}
+		window.alert(code);
+	}
+    codeContainer.innerHTML = code;
+};
 	
 
 }
