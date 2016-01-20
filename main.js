@@ -25,7 +25,8 @@
  		weightSubList = document.getElementsByClassName("sub");
 
  //access code genarating elements
- 	var codeContainer =  document.getElementById("codeContainer");
+ 	var codeContainer =  document.getElementById("codeContainer"),
+ 		getCode = document.getElementById("getCode");
  
  //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
  //put color labels with their belonging color inputs together
@@ -358,19 +359,19 @@ changeMapStyle("weight", setWeightInputList);
 
  
 
-codeContainer.onclick = function(){
-	var code ="";
+getCode.onclick = function(){
+	openNextLevelEmbedding("mainMenuOption", "embeddingLevel1");
+	var code ="var mapCanvas = document.getElementById('map');\nvar mapOptions = {\n    center: new google.maps.LatLng(" + inputfieldLat.value*1 + "," + inputfieldLng.value*1 + " ),\n    zoom: " + inputfieldZoom.value * 1 + ",\n    mapTypeId: google.maps.MapTypeId.ROADMAP\n}\nvar map = new google.maps.Map(mapCanvas, mapOptions);\nvar style = [\n";
+	
 	for (style in originalStyle){
-		window.alert("style: " + style);
 		code = code + "{";
 		
 		for (styleElement in originalStyle[style]){
-			window.alert("styleElement: " + styleElement);
+
 			if (styleElement == "stylers") {
 				code = code + "\n" + "    " + styleElement + ": [";
 				for (listOfStyles in originalStyle[style][styleElement]) {
 					for (nameOfSTyler in originalStyle[style][styleElement][listOfStyles]) {
-						window.alert("inside if obj: " + nameOfSTyler + "value" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler]);
 						code = code + "\n" + "        "+ "{" + nameOfSTyler + ":" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler] + "}";
 					}
 				}
@@ -383,7 +384,6 @@ codeContainer.onclick = function(){
 		if (style < originalStyle.length-1) {
 			code = code + ", "
 		}
-		window.alert(code);
 	}
     codeContainer.innerHTML = code;
 };
