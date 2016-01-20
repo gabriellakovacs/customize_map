@@ -311,21 +311,47 @@ function changeMapStyle(stylerType, InputList) {
 							featureType = featureType + origFeatureType[n];
 						}
 					}
-
-//create new map style 
-					var mapStyle = {
-						featureType: featureType,
-				    	elementType: elementType,
-						stylers: [
-						stylerObject
-						]
-					};
-
-//change map styling
-					originalStyle.push(mapStyle);
+//check if there is already a styling with same featureType and elementType
+					for (style in originalStyle) {
+						if (originalStyle[style].featureType === featureType && originalStyle[style].elementType === elementType) {
+							window.alert("found same feature type");
+							for (styleListItem in originalStyle[style].stylers){
+								//if there is check if they already have the same stylerType(color/weigt/visibility)
+								if (originalStyle[style].stylers[styleListItem][stylerType]){
+									//if they have, change it to new value
+									originalStyle[style].stylers[styleListItem] = stylerObject;
+									break
+								}
+								//if they don't, append new styler object to already existing stylesList
+								else if (Number(styleListItem) === originalStyle[style].stylers.length-1) {
+									window.alert("we have to append it to stylers");
+									originalStyle[style].stylers.push(stylerObject);
+								}
+							}
+							break	
+						}
+						// if there is not yet a styling with same featureType and elementType, than create a new style
+						else if (Number(style) === originalStyle.length-1) {
+							
+							//create new map style 
+							var mapStyle = {
+								featureType: featureType,
+						    	elementType: elementType,
+								stylers: [
+								stylerObject
+								]
+							};
+					
+							//change map styling
+							originalStyle.push(mapStyle);
+							
+						}
+					}
+					//update map
 					map.set('styles', 
-						originalStyle
-					);
+								originalStyle
+							);
+
 		};
 	};
 
