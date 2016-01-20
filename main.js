@@ -195,52 +195,37 @@
 			);
 	    };
 	}
+//function to open next level of embedding in main menu
+	function openNextLevelEmbedding(classNameOfClickedElement, classNameOfElementToBeOpened) {
 
-//expand collapsed submenu on click on main menu
-	for (var i=0; i < mainMenuOptionList.length; i++) {
+		var elementToBeOpened = document.querySelectorAll("." + classNameOfClickedElement + ":hover+." + classNameOfElementToBeOpened)[0];
+		if (elementToBeOpened.className.indexOf("collapse") > -1) {
 
-	    mainMenuOptionList[i].onclick = function() {
-
-	    	var mainMenuOption = this.id;
-
-			var embeddingLevel1 = document.querySelectorAll(".mainMenuOption:hover+.embeddingLevel1")[0];
-
-			if (embeddingLevel1.className.indexOf("collapse") > -1) {
-
-				var expandedItem = document.querySelectorAll(".embeddingLevel1.expand");
+				var expandedItem = document.querySelectorAll("." + classNameOfElementToBeOpened + ".expand");
 
 				if (expandedItem.length>0) {
-					expandedItem[0].className = "embeddingLevel1 collapse"
+					expandedItem[0].className =  expandedItem[0].className.replace("expand", "collapse");
 				}
-				embeddingLevel1.className = "embeddingLevel1 expand";
+				elementToBeOpened.className = elementToBeOpened.className.replace("collapse", "expand");
 			} else {
-				embeddingLevel1.className = "embeddingLevel1 collapse";
-			};
-
-//expand customization panel on click on submenu
-			var embeddingLevel1List = document.querySelectorAll(".subMenuOption");
-			for (var i=0; i < embeddingLevel1List.length; i++) {
-
-
-			    embeddingLevel1List[i].onclick = function() {
-
-					var embeddingLevel2 = document.querySelectorAll(".subMenuOption:hover+.embeddingLevel2")[0];
-
-					if (embeddingLevel2.className.indexOf("collapse") > -1) {
-
-						var expandedItem = document.querySelectorAll(".embeddingLevel2.expand");
-
-						if (expandedItem.length>0) {
-							expandedItem[0].className = "embeddingLevel2 customizationPanelContainer collapse"
-						}
-						embeddingLevel2.className = "embeddingLevel2 customizationPanelContainer expand";
-					} else {
-						embeddingLevel2.className = "embeddingLevel2 customizationPanelContainer collapse";
-					};
-				};
-		}
-		};
+				elementToBeOpened.className = elementToBeOpened.className.replace("expand", "collapse");
+			}
 	}
+
+//expand collapsed 1st level embeddings on click on main menu
+	for (var i=0; i < mainMenuOptionList.length; i++) {
+	    mainMenuOptionList[i].onclick = function() {
+	    	openNextLevelEmbedding("mainMenuOption", "embeddingLevel1");
+		}
+	}
+
+//expand collapsed 2nd level embeddings on click on submenu
+	for (var i=0; i < embeddingLevel1List.length; i++) {
+	    embeddingLevel1List[i].onclick = function() {
+	    	openNextLevelEmbedding("subMenuOption", "embeddingLevel2");
+		}
+	}
+
 
 //functions to increment/decrement weight input
 function incrementWeight(weightInstance) {
