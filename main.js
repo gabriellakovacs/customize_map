@@ -96,26 +96,35 @@
 	    stylers: [
 	    	{ color: '#bbbbbb' }
 	    ]
-	},
-	{
+	}, {
+	    featureType: 'landscape',
+	    elementType: 'all',
+	    stylers: [
+	    	{ color: '#dddddd' }
+	    ]
+	}, {
 	    featureType: 'all',
 	    elementType: 'labels.text.stroke',
 	    stylers: [
 	    	{ visibility: 'off' }
 	    ]
-	},
-	{
-	    featureType: 'administrative',
+	}, {
+	    featureType: 'all',
 	    elementType: 'labels.text.fill',
 	    stylers: [
 	    	{  visibility: 'off' }
 	    ]
-	},  
-	{
+	}, {
+	    featureType: 'all',
+	    elementType: 'labels.icon',
+	    stylers: [
+	    	{  visibility: 'off' }
+	    ]
+	},{
 	    featureType: 'water',
 	    elementType: 'all',
 	    stylers: [
-	    	{ color: '#eeeeee' }
+	    	{ color: '#777777' }
 	    ]
 	}
 	];
