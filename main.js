@@ -25,7 +25,8 @@
  		weightSubList = document.getElementsByClassName("sub");
 
  //access code genarating elements
- 	var codeContainer =  document.getElementById("codeContainer"),
+ 	var jsCodeContainer =  document.getElementById("jsCodeContainer"),
+ 		cssCodeContainer =  document.getElementById("cssCodeContainer"),
  		getCode = document.getElementById("getCode");
  
  //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
@@ -381,31 +382,35 @@ changeMapStyle("weight", setWeightInputList);
 
 getCode.onclick = function(){
 	openNextLevelEmbedding("mainMenuOption", "embeddingLevel1");
-	var code ="var mapCanvas = document.getElementById('map');\nvar mapOptions = {\n    center: new google.maps.LatLng(" + inputfieldLat.value*1 + "," + inputfieldLng.value*1 + " ),\n    zoom: " + inputfieldZoom.value * 1 + ",\n    mapTypeId: google.maps.MapTypeId.ROADMAP\n}\nvar map = new google.maps.Map(mapCanvas, mapOptions);\nvar style = [\n";
+	var jsCode ="var mapCanvas = document.getElementById('map');\nvar mapOptions = {\n    center: new google.maps.LatLng(" + inputfieldLat.value*1 + "," + inputfieldLng.value*1 + " ),\n    zoom: " + inputfieldZoom.value * 1 + ",\n    mapTypeId: google.maps.MapTypeId.ROADMAP\n}\nvar map = new google.maps.Map(mapCanvas, mapOptions);\nvar style = [\n";
 	
 	for (style in originalStyle){
-		code = code + "{";
+		jsCode = jsCode + "{";
 		
 		for (styleElement in originalStyle[style]){
 
 			if (styleElement == "stylers") {
-				code = code + "\n" + "    " + styleElement + ": [";
+				jsCode = jsCode + "\n" + "    " + styleElement + ": [";
 				for (listOfStyles in originalStyle[style][styleElement]) {
 					for (nameOfSTyler in originalStyle[style][styleElement][listOfStyles]) {
-						code = code + "\n" + "        "+ "{" + nameOfSTyler + ":" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler] + "}";
+						jsCode = jsCode + "\n" + "        "+ "{" + nameOfSTyler + ":" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler] + "}";
 					}
 				}
-				code = code + "\n" + "    " + "]";
+				jsCode = jsCode + "\n" + "    " + "]";
 			} else {
-				code = code + "\n" + "    " + styleElement + ": " + "'" + originalStyle[style][styleElement] + "'" + ",";
+				jsCode = jsCode + "\n" + "    " + styleElement + ": " + "'" + originalStyle[style][styleElement] + "'" + ",";
 			}
 		}
-		code = code + "\n}";
-		if (style < originalStyle.length-1) {
-			code = code + ", "
+		jsCode = jsCode + "\n}";
+		if (Number(style) < originalStyle.length-1) {
+			jsCode = jsCode + ", "
 		}
 	}
-    codeContainer.innerHTML = code;
+    jsCodeContainer.innerHTML = jsCode;
+
+    var cssCode = "#map {\nwidth:" + inputfieldWidth.value*1 + "vw;\nheight: " + inputfieldHeight.value*1 + "vh;\n}";
+
+    cssCodeContainer.innerHTML = cssCode;
 };
 	
 
