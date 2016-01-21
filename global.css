@@ -1,7 +1,9 @@
+/*-------------------------RESET-------------------------*/
 body {
 	margin:0;
 	line-height: 140%;
 	overflow-x:hidden;
+  font-family: Quicksand;
 }
 
 * {
@@ -17,85 +19,72 @@ li {
   list-style: none;
 }
 
-#map {
-	width: 100vw;
-	height: 100vh;
-	position: fixed !important; /*to overwrite javascript styling on googlemaps*/
-}
-
-.expand {
-	display: inline-block;
-	height: 100px;
-}
-
-.collapse {
-	display: none;
-	height: 0px;
-	padding: 1em;
-	cursor: pointer;
-	background: #e1e1e1;
-	text-decoration: none;
-	color: #111;
-	font-weight: 700;
-}
-
-.mainMenuOption{
-	cursor: pointer;
-	background: #888;
-	color: #000;
-	margin: .4em;
-	padding: .5em;
-}
-
-.subMenuOption{
-	cursor: pointer;
-	background: #fff;
-	color: #333;
-	margin: .4em;
-	padding: .5em;
-}
-
-.customizationPanel {
-	height: 100px;
-	transition: height 300s;
-}
-
-.customizeMenu {
-	padding-left: 20px;
-	width: 300px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	min-height: 100vh;
-	background: rgba(11, 11, 1, .6);
-	bottom: 1px solid red;
-	color: white;
-	font-family: Quicksand;
+a {
+    color: #2098D1;
+    text-decoration: none;
 }
 
 input, select, option {
-	background: transparent;
+  background: transparent;
   border: none;
-	margin: 0px;
-	height: 65px;
+  margin: 0px;
+  height: 65px;
   width: 65px;
   padding: 0;
   line-height: 50px;
   appearance:none;
   -webkit-appearance: none
 }
+/*------------------------------------------------------------------------------*/
 
-label {
+#map {
+	width: 100vw;
+	height: 100vh;
+	position: fixed !important; /*to overwrite javascript styling on googlemaps*/
+}
+
+/*-------------------------MENU ITEMS-------------------------*/
+.menuContainer {
+  padding-left: 20px;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-height: 100vh;
+  background: rgba(11, 11, 1, .6);
+}
+
+.mainMenuOption{
   cursor: pointer;
+  background: #888;
+  color: #000;
+  margin: .4em;
+  padding: .5em;
 }
 
-a {
-    color: #2098D1;
-    text-decoration: none;
+.subMenuOption{
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  margin: .4em;
+  padding: .5em;
 }
 
-.hvr-shutter-out-vertical {
-	width:280px;
+#getCode {
+  background: #087F6A;
+  color: #fff;
+}
+/*basic menu marker on/off*/
+input:disabled {
+  border: 2px solid grey;
+}
+input:disabled+label {
+  color:#ab3398;
+}
+
+/*--------------------RECOLOR VERTICALLY FROM CENTER MENU ITEMS ON HOVER--------------------*/
+.recolorOnHover {
+  width:280px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -moz-osx-font-smoothing: grayscale;
@@ -105,7 +94,7 @@ a {
   transition-duration: 0.3s;
 }
 
-.hvr-shutter-out-vertical:before {
+.recolorOnHover:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -125,82 +114,76 @@ a {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+.recolorOnHover:hover, .recolorOnHover:focus, .recolorOnHover:active {
   color: white;
 }
-.hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+.recolorOnHover:hover:before, .recolorOnHover:focus:before, .recolorOnHover:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
 
-.fill, .stroke {
+/*--------------------OPEN/CLOSE MENU ITEMS--------------------*/
+.expand {
 	display: inline-block;
-
-}
-.container label {
-input[type=number] {
-  float: left;
-  margin-left: -8px;
-  width: 30px;
-  height: 35px;
-  line-height: 35px;
-  padding: 0;
-  text-align: center;
-  color: #fff;
-  border-top: 2px #fff solid;
-  border-bottom: 2px #fff solid;
-  background: none;
-  outline: none;
-  pointer-events: none;
 }
 
-span.spinner {
-  position: absolute;
-  height: 40px;
-  user-select:           none;
-  -ms-user-select:       none;
-  -moz-user-select:      none;
-  -webkit-user-select:   none;
-  -webkit-touch-callout: none;
+.collapse {
+	display: none;
+	height: 0px;
+	padding: 1em;
+	cursor: pointer;
+	background: #e1e1e1;
+	text-decoration: none;
+	color: #111;
+	font-weight: 700;
 }
 
-span.spinner > .sub, span.spinner > .add {
-  float: left;
-  display: block;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  line-height: 33px;
-  color: #fff;
-  border: 2px #fff solid;
-  border-right: 0;
-  border-radius: 2px 0 0 2px;
-  cursor: pointer;
-  transition:         0.1s linear;
-  -o-transition:      0.1s linear;
-  -ms-transition:     0.1s linear;
-  -moz-transition:    0.1s linear;
-  -webkit-transition: 0.1s linear;
-  border-radius:60% 0 0 60%;
+/*-------------------------CUSTOMIZATION PANEL-------------------------*/
+.customizationPanelContainer {
+  color:#fff;
+	height: 100px;
+	transition: height 300s;
 }
 
-span.spinner > .add {
-  top: 0;
-  border: 2px #fff solid;
-  border-left: transparent;
-  border-radius:0 60% 60% 0;
-  margin-left: -8px;
+.customizationPanel {
+  background: #25323B;
+  border: none;
 }
 
-span.spinner > .sub:hover, span.spinner > .add:hover {
-  background: #fff;
+.customizationPanelHeader {
+  background: white;
+  border: none;
+  padding: 10px;
   color: #25323B;
+  width: 200px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
+.container {
+  display: inline-block;
+  margin-top: 16px;
+  margin-right: 26px;
 }
+
+label {
+  cursor: pointer;
+}
+
+.container label{
+  line-height: 31px;
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  position: absolute;
+  backface-visibility: hidden;
+  text-align: center;
+  border-radius: 60%;
+}
+
+.color label, .weight label {
+  color: transparent;
+}
+
+.visibility input, .color input {
   position: absolute;
   left:-2px;
   width: 100%;
@@ -210,36 +193,35 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 60%;
 }
 
-.container {
-  width: 65px;
-  height: 65px; 
-  border: 1px solid white;
-  margin: 10px;
-  display: inline-block;
+h4 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+  margin-top: 30px;
+  text-align: right;
+}
+
+.container.visibility, .container.color {
+  width: 35px;
+  height: 35px; 
+  border: 2px solid white;
   background: grey;
-  perspective: 800px;
   position: relative;
-  margin-bottom: 100px;
   border-radius: 60%;
 }
+
 .color input {
   visibility: hidden;
 }
-.switchOnOff input{
-  display: none;
+
+.setWeight, .setColor, .setVisibility {
+  display: inline-block;
 }
 
-.container label{
-  line-height: 63px;
-  width: 63px;
-  height: 63px;
-  cursor: pointer;
-  position: absolute;
-  backface-visibility: hidden;
-  text-align: center;
-  border-radius: 60%;
+/*--------------------VISIBILITY INPUT FLIP--------------------*/
+.switchOnOff {
+  perspective: 800px;
 }
-
 .switchOnOff input+label {
   transform: rotateY( 180deg);
   transition: transform 1s ease;
@@ -264,4 +246,80 @@ input[type=number]::-webkit-outer-spin-button {
 
 .switchOnOff .off+label{
   background: #333;
+}
+
+.switchOnOff input{
+  display: none;
+}
+
+/*--------------------WEIGHT INPUT STYLE--------------------*/
+.weight {
+  position: relative;
+  margin: auto;
+  width: 100px;
+  height: 35px;
+  margin-right: 0;
+}
+
+.inputNumberContainer input{
+  float: left;
+  margin-left: -8px;
+  width: 30px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  border-top: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  background: none;
+  outline: none;
+}
+
+.inputNumberContainer {
+  position: absolute;
+  height: 40px;
+  user-select:           none;
+  -ms-user-select:       none;
+  -moz-user-select:      none;
+  -webkit-user-select:   none;
+  -webkit-touch-callout: none;
+}
+
+.inputNumberContainer > .sub, .inputNumberContainer > .add {
+  float: left;
+  display: block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 33px;
+  color: #fff;
+  border: 2px #fff solid;
+  border-right: 0;
+  border-radius: 2px 0 0 2px;
+  cursor: pointer;
+  transition:         0.1s linear;
+  -o-transition:      0.1s linear;
+  -ms-transition:     0.1s linear;
+  -moz-transition:    0.1s linear;
+  -webkit-transition: 0.1s linear;
+  border-radius:60% 0 0 60%;
+}
+
+.inputNumberContainer > .add {
+  top: 0;
+  border: 2px #fff solid;
+  border-left: transparent;
+  border-radius:0 60% 60% 0;
+  margin-left: -8px;
+}
+
+.inputNumberContainer > .sub:hover, .inputNumberContainer > .add:hover {
+  background: #fff;
+  color: #25323B;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
 }
