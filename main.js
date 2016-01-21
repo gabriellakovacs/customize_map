@@ -17,12 +17,12 @@
  		embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
 
 //access input fields in custommization panel
- 	var setColorInputList = document.getElementsByClassName("setColor"),
- 		setWeightInputList = document.getElementsByClassName("setWeight"),
- 		setVisibilityInputList = document.getElementsByClassName("setVisibility"),
- 		labels = document.getElementsByTagName("LABEL"),
- 		weightAddList = document.getElementsByClassName("add"),
- 		weightSubList = document.getElementsByClassName("sub");
+ 	var setColorInputList = document.getElementsByClassName('setColor'),
+ 		setWeightInputList = document.getElementsByClassName('setWeight'),
+ 		setVisibilityInputList = document.getElementsByClassName('setVisibility'),
+ 		labels = document.getElementsByTagName('LABEL'),
+ 		addButtonList = document.getElementsByClassName('add'),
+ 		subButtonList = document.getElementsByClassName('sub');
 
  //access code genarating elements
  	var jsCodeContainer =  document.getElementById("jsCodeContainer"),
@@ -237,32 +237,32 @@
 	}
 
 
-//functions to increment/decrement weight input
-function incrementWeight(weightInstance) {
-	if (Number(weightInstance.value) < 11) {
-		weightInstance.value = Number(weightInstance.value) + 1;
+//functions to increment/decrement number input
+function incrementWeight(numberInput) {
+	if (Number(numberInput.value) < Number(numberInput.max)) {
+		numberInput.value = Number(numberInput.value) + 1;
 	}
 }
 
-function decrementWeight(weightInstance) {
-	if (Number(weightInstance.value) > 1) {
-		weightInstance.value = Number(weightInstance.value) - 1;
+function decrementWeight(numberInput) {
+	if (Number(numberInput.value) > Number(numberInput.min)) {
+		numberInput.value = Number(numberInput.value) - 1;
 		}
 }
 
-for (var i=0; i < weightAddList.length; i++) {
-	weightAddList[i].onclick = function() {
-		var weightInstBelongingToChangedAdd = this.previousElementSibling;
-		incrementWeight(weightInstBelongingToChangedAdd);
-		weightInstBelongingToChangedAdd.onchange();
+for (var i=0; i < addButtonList.length; i++) {
+	addButtonList[i].onclick = function() {
+		var numberInputBelongingToClickedAddButton = this.previousElementSibling;
+		incrementWeight(numberInputBelongingToClickedAddButton);
+		numberInputBelongingToClickedAddButton.onchange();
 	}
 }
 
-for (var i=0; i < weightSubList.length; i++) {
-	weightSubList[i].onclick = function() {
-		var weightInstBelongingToChangedSub = this.nextElementSibling;
-		decrementWeight(weightInstBelongingToChangedSub);
-		weightInstBelongingToChangedSub.onchange();
+for (var i=0; i < subButtonList.length; i++) {
+	subButtonList[i].onclick = function() {
+		var numberInputBelongingToClickedSubButton = this.nextElementSibling;
+		decrementWeight(numberInputBelongingToClickedSubButton);
+		numberInputBelongingToClickedSubButton.onchange();
 	}
 }
 
