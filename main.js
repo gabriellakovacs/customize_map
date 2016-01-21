@@ -12,9 +12,9 @@
  		inputfieldMarkerLng = document.getElementById('markerLng');
 
  //access multiple level of menu items
- 	var previewAreaOnMapList = document.getElementsByClassName("previewAreaOnMap"),
- 		mainMenuOptionList = document.getElementsByClassName("mainMenuOption"),
- 		embeddingLevel1List = document.getElementsByClassName("embeddingLevel1");
+ 	var previewAreaOnMapList = document.getElementsByClassName('previewAreaOnMap'),
+ 		mainMenuOptionList = document.getElementsByClassName('mainMenuOption'),
+ 		subMenuOptionList = document.getElementsByClassName('subMenuOption');
 
 //access input fields in custommization panel
  	var setColorInputList = document.getElementsByClassName('setColor'),
@@ -230,8 +230,8 @@
 	}
 
 //expand collapsed 2nd level embeddings on click on submenu
-	for (var i=0; i < embeddingLevel1List.length; i++) {
-	    embeddingLevel1List[i].onclick = function() {
+	for (var i=0; i < subMenuOptionList.length; i++) {
+	    subMenuOptionList[i].onclick = function() {
 	    	openNextLevelEmbedding("subMenuOption", "embeddingLevel2");
 		}
 	}
