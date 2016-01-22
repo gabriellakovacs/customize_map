@@ -74,13 +74,6 @@ input, select, option {
   background: #087F6A;
   color: #fff;
 }
-/*basic menu marker on/off*/
-input:disabled {
-  border: 2px solid grey;
-}
-input:disabled+label {
-  color:#ab3398;
-}
 
 /*--------------------RECOLOR VERTICALLY FROM CENTER MENU ITEMS ON HOVER--------------------*/
 .recolorOnHover {
@@ -128,20 +121,12 @@ input:disabled+label {
 }
 
 .collapse {
-	display: none;
-	height: 0px;
-	padding: 1em;
-	cursor: pointer;
-	background: #e1e1e1;
-	text-decoration: none;
-	color: #111;
-	font-weight: 700;
+	display: none!important;
 }
 
 /*-------------------------CUSTOMIZATION PANEL-------------------------*/
 .customizationPanelContainer {
   color:#fff;
-	height: 100px;
 	transition: height 300s;
 }
 
@@ -201,7 +186,7 @@ h4 {
   text-align: right;
 }
 
-.container.visibility, .container.color {
+.container.switchOnOff, .container.color {
   width: 35px;
   height: 35px; 
   border: 2px solid white;
@@ -322,4 +307,32 @@ h4 {
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
+}
+
+.basic .container {
+  display: block;
+  margin: 5px;
+  height: 35px;
+  
+}
+
+.basic .inputNumberContainer{
+  margin-left: 100px; /*.basic .marker margin + 60px*/
+}
+
+.basic .marker {
+  margin-left: 40px; /*.basic .inputNumberContainer margin - 60px*/
+}
+
+.basic h4 {
+  margin-top: 0;
+  position: relative;
+  top: -20px;
+  margin-left: 5px;
+  text-align: left;
+  display: inline-block;
+}
+
+.basic .container.marker {
+  display: inline-block;
 }
