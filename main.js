@@ -6,10 +6,12 @@
  		inputfieldZoom = document.getElementById('zoom'),
  		inputfieldLat = document.getElementById('lat'),
  		inputfieldLng = document.getElementById('lng'),
- 		inputfieldMarkerON = document.getElementById("markerON"),
- 		inputfieldMarkerOFF = document.getElementById("markerOFF"),
+ 		inputfieldMarkerON = document.getElementById('markerON'),
+ 		inputfieldMarkerOFF = document.getElementById('markerOFF'),
  		inputfieldMarkerLat = document.getElementById('markerLat'),
- 		inputfieldMarkerLng = document.getElementById('markerLng');
+ 		inputfieldMarkerLng = document.getElementById('markerLng'),
+ 		markerLatContainer = document.querySelectorAll('.container.markerLat')[0],
+ 		markerLngContainer = document.querySelectorAll('.container.markerLng')[0];
 
  //access multiple level of menu items
  	var previewAreaOnMapList = document.getElementsByClassName('previewAreaOnMap'),
@@ -25,9 +27,9 @@
  		subButtonList = document.getElementsByClassName('sub');
 
  //access code genarating elements
- 	var jsCodeContainer =  document.getElementById("jsCodeContainer"),
- 		cssCodeContainer =  document.getElementById("cssCodeContainer"),
- 		getCode = document.getElementById("getCode");
+ 	var jsCodeContainer =  document.getElementById('jsCodeContainer'),
+ 		cssCodeContainer =  document.getElementById('cssCodeContainer'),
+ 		getCode = document.getElementById('getCode');
  
  //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
  //put color labels with their belonging color inputs together
@@ -133,6 +135,9 @@
 	map.set('styles', originalStyle);
 	var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 	var myLatLng =  new google.maps.LatLng(47.5403, 19.0463);
+	var marker = new google.maps.Marker({
+		position: myLatLng
+	});
 
 //functions that change map when user changes BASIC map settings
 	var mapCSS = document.getElementById("map");
@@ -156,29 +161,44 @@
 		var lng = map.getCenter().lng();
 		var newCenter = new google.maps.LatLng(inputfieldLat.value*1, lng);
     	map.setCenter(newCenter);
-    	marker.setPosition(newCenter);
+    	//marker.setPosition(newCenter);
 	};
 
 	inputfieldLng.onchange = function() {
 		var lat = map.getCenter().lat();
 		var newCenter = new google.maps.LatLng(lat, inputfieldLng.value*1);
     	map.setCenter(newCenter);
-    	marker.setPosition(newCenter);
+    	//marker.setPosition(newCenter);
 	};
 
-	inputfieldMarkerON.onchange = function() {
-		inputfieldMarkerLat.disabled = false;
-		inputfieldMarkerLng.disabled = false;
+	inputfieldMarkerON.onclick = function() {
+		markerLatContainer.className = markerLatContainer.className.replace("collapse", "expand");
+		markerLngContainer.className = markerLngContainer.className.replace("collapse", "expand");
+		
+		  marker.setMap(map);
+
+		  inputfieldMarkerLng.onchange = function() {
+			var newMarkerPosition = new google.maps.LatLng(inputfieldMarkerLat.value*1, inputfieldMarkerLng.value*1);
+	    	marker.setPosition(newMarkerPosition);
+		  }
+
+		  inputfieldMarkerLat.onchange = function() {
+			var newMarkerPosition = new google.maps.LatLng(inputfieldMarkerLat.value*1, inputfieldMarkerLng.value*1);
+	    	marker.setPosition(newMarkerPosition);
+		  }
 	};
 
-	inputfieldMarkerOFF.onchange = function() {
-		inputfieldMarkerLat.disabled = true;
-		inputfieldMarkerLng.disabled = true;
+	inputfieldMarkerOFF.onclick = function() {
+		marker.setMap(null);
+		markerLatContainer.className = markerLatContainer.className.replace("expand", "collapse");
+		markerLngContainer.className = markerLngContainer.className.replace("expand", "collapse");
 	};
+
+
 
 	
 
-//preview the area which is goung to be effected on hover on CUSTOMIZATION menu items 
+//preview the area which is going to be effected on hover on CUSTOMIZATION menu items 
 	for (var i=0; i < previewAreaOnMapList.length; i++) {
 		previewAreaOnMapList[i].onmouseover = function() {
 			var area = this.id;
@@ -324,7 +344,6 @@ function changeMapStyle(stylerType, InputList) {
 //check if there is already a styling with same featureType and elementType
 					for (style in originalStyle) {
 						if (originalStyle[style].featureType === featureType && originalStyle[style].elementType === elementType) {
-							window.alert("found same feature type");
 							for (styleListItem in originalStyle[style].stylers){
 								//if there is check if they already have the same stylerType(color/weigt/visibility)
 								if (originalStyle[style].stylers[styleListItem][stylerType]){
@@ -334,7 +353,6 @@ function changeMapStyle(stylerType, InputList) {
 								}
 								//if they don't, append new styler object to already existing stylesList
 								else if (Number(styleListItem) === originalStyle[style].stylers.length-1) {
-									window.alert("we have to append it to stylers");
 									originalStyle[style].stylers.push(stylerObject);
 								}
 							}
