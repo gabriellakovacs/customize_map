@@ -24,62 +24,56 @@
 
     <main class="menuContainer">
         <ul>
-            <li>
+            <li class="basic">
                 <div class="mainMenuOption recolorOnHover" id ="basic">basic</div>
                 <form class="embeddingLevel1 customizationPanelContainer collapse">
                     <fieldset class="customizationPanel">
                         <legend></legend>
-                        <label for="width">width</label>
-                        <br>
                         <div class="width container">
+                            <label for="width">width</label>
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
                                 <input type="number" name="width" id="width" value="100" min="1" max="100">
                                 <span class="add">+</span>
                             </span>
                         </div>
-                        <br>
-                        <label for="height">height</label>
-                        <br>
+                        
                         <div class="height container">
+                            <label for="height">height</label>
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
                                 <input type="number" name="height" id="height" value="100" min="1" max="100">
                                 <span class="add">+</span>
                             </span>
                         </div>
-                        <br>
-                        <label for="zoom">zoom</label>
-                        <br>
+                        
                         <div class="zoom container">
+                            <label for="zoom">zoom</label>
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
                                 <input type="number" name="zoom" id="zoom" value="5" min="0" max="22">
                                 <span class="add">+</span>
                             </span>
                         </div>
-                        <br>
-                        <label for="lat">lat</label>
-                        <br>
+                        
                         <div class="lat container">
+                            <label for="lat">lat</label>
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
                                 <input type="number" name="lat" id="lat" value="0" min="-90" max="90">
                                 <span class="add">+</span>
                             </span>
                         </div>
-                        <br>
-                        <label for="lng">lng</label>
-                        <br>
+                        
                         <div class="lng container">
+                            <label for="lng">lng</label>
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
                                 <input type="number" name="lng" id="lng" value="100" min="-180" max="180">
                                 <span class="add">+</span>
                             </span>
                         </div>
-                        <br>
-            
+                        <h4>marker</h4>
                         <div class="marker container switchOnOff">
                             <input type="radio" name="marker" id="markerON" value="on" class="marker on">
                             <label for="markerON">on</label>
@@ -87,30 +81,23 @@
                             <label for="markerOFF">off</label>
                         </div>   
 
-                        <div class="markerLat container">
+                        <div class="markerLat container collapse">
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
-                                <input type="number" name="markerLat" id="markerLat" value="22" min="-90" max="90" disabled>
+                                <input type="number" name="markerLat" id="markerLat" value="22" min="-90" max="90" >
                                 <span class="add">+</span>
                             </span>
                             <label for="markerLat">lat</label>
                         </div>        
-                        <div class="markerLng container">
+                        <div class="markerLng container collapse">
                             <span class="inputNumberContainer">
                                 <span class="sub">-</span>
-                                <input type="number" name="markerLng" id="markerLng" value="100" min="-180" max="180" disabled>
+                                <input type="number" name="markerLng" id="markerLng" value="100" min="-180" max="180" >
                                 <span class="add">+</span>
                             </span>
                             <label for="markerLng">lng</label>
                         </div>        
-                            
-                            
-                          
-                            <pre>valami</pre>
-                            <br>
-                            <br>
-                            <b></b>
-                            <h1>cim</h1>
+                        
                     </fieldset>
                 </form>
         
