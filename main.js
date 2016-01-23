@@ -399,34 +399,49 @@ changeMapStyle("weight", setWeightInputList);
  
 
 getCode.onclick = function(){
-	openNextLevelEmbedding("mainMenuOption", "embeddingLevel1");
-	var jsCode ="var mapCanvas = document.getElementById('map');\nvar mapOptions = {\n    center: new google.maps.LatLng(" + inputfieldLat.value*1 + "," + inputfieldLng.value*1 + " ),\n    zoom: " + inputfieldZoom.value * 1 + ",\n    mapTypeId: google.maps.MapTypeId.ROADMAP\n}\nvar map = new google.maps.Map(mapCanvas, mapOptions);\nvar style = [\n";
+	codeContainer.className = codeContainer.className.replace("collapse", "expand");
+
+	var jsCode = "function initialize() {\n";
+	jsCode = jsCode + "    var mapCanvas = document.getElementById('map');\n";
+	jsCode = jsCode + "    var mapOptions = {\n    center: new google.maps.LatLng(" + inputfieldLat.value*1 + ", " + inputfieldLng.value*1 + "),\n    zoom: " + inputfieldZoom.value * 1 + ",\n    mapTypeId: google.maps.MapTypeId.ROADMAP\n    };\n"
+	jsCode = jsCode + "    var map = new google.maps.Map(mapCanvas, mapOptions);\n";
+	jsCode = jsCode + "    var style = [\n";
 	
 	for (style in originalStyle){
-		jsCode = jsCode + "{";
-		
-		for (styleElement in originalStyle[style]){
+		jsCode = jsCode + "    {\n";
+		jsCode = jsCode + "        featureType: " +  "'" + originalStyle[style].featureType + "'" + ",\n";
+		jsCode = jsCode + "        elementType: " +  "'" + originalStyle[style].elementType + "'" + ",\n";
+		jsCode = jsCode + "        stylers: [";
 
-			if (styleElement == "stylers") {
-				jsCode = jsCode + "\n" + "    " + styleElement + ": [";
-				for (listOfStyles in originalStyle[style][styleElement]) {
-					for (nameOfSTyler in originalStyle[style][styleElement][listOfStyles]) {
-						jsCode = jsCode + "\n" + "        "+ "{" + nameOfSTyler + ":" + originalStyle[style][styleElement][listOfStyles][nameOfSTyler] + "}";
-					}
-				}
-				jsCode = jsCode + "\n" + "    " + "]";
-			} else {
-				jsCode = jsCode + "\n" + "    " + styleElement + ": " + "'" + originalStyle[style][styleElement] + "'" + ",";
+		for (listOfStyles in originalStyle[style].stylers) {
+			for (nameOfSTyler in originalStyle[style].stylers[listOfStyles]) {
+				jsCode = jsCode + "\n" + "            "+ "{" + nameOfSTyler + ":" + "'" + originalStyle[style].stylers[listOfStyles][nameOfSTyler] + "'" + "}";
+			}
+			if (Number(listOfStyles) < originalStyle[style].stylers.length-1) {
+				jsCode = jsCode + ", ";
 			}
 		}
-		jsCode = jsCode + "\n}";
+		jsCode = jsCode + "\n        ]\n    }";
+
 		if (Number(style) < originalStyle.length-1) {
-			jsCode = jsCode + ", "
-		}
+				jsCode = jsCode + ",\n";
+			} else {
+				jsCode = jsCode + "\n];";
+			}
 	}
+	
+
+	jsCode = jsCode + "\n    map.set('styles', style);";
+
+	if (inputfieldMarkerON.checked === true) {
+		jsCode = jsCode + "\nvar marker = new google.maps.Marker({\nposition:  new google.maps.LatLng(" + inputfieldMarkerLat.value*1 + ", " + inputfieldMarkerLng.value*1 + "),\nmap: map});";
+
+	}
+
+	jsCode = jsCode + "\n}\nwindow.onload = initialize();";
     jsCodeContainer.innerHTML = jsCode;
 
-    var cssCode = "#map {\nwidth:" + inputfieldWidth.value*1 + "vw;\nheight: " + inputfieldHeight.value*1 + "vh;\n}";
+    var cssCode = "#map {\n    width:" + inputfieldWidth.value*1 + "vw;\n    height: " + inputfieldHeight.value*1 + "vh;\n}\nbody {\n    margin: 0;\n}";
 
     cssCodeContainer.innerHTML = cssCode;
 };
