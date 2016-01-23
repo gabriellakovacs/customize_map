@@ -29,7 +29,10 @@
  //access code genarating elements
  	var jsCodeContainer =  document.getElementById('jsCodeContainer'),
  		cssCodeContainer =  document.getElementById('cssCodeContainer'),
- 		getCode = document.getElementById('getCode');
+ 		codeContainer =  document.getElementById('codeContainer'),
+ 		getCode = document.getElementById('getCode'),
+ 		closeCode = document.getElementById('closeCode');
+ 		
  
  //the change/click event on some items should trigger a change on another, related item. for ease of access collect these related items together
  //put color labels with their belonging color inputs together
@@ -399,7 +402,12 @@ changeMapStyle("weight", setWeightInputList);
  
 
 getCode.onclick = function(){
-	codeContainer.className = codeContainer.className.replace("collapse", "expand");
+	if (codeContainer.className.indexOf("codeOut") > -1) {
+		codeContainer.className = codeContainer.className.replace("codeOut", "codeIn");
+	} else {
+		codeContainer.className = codeContainer.className + "codeIn";
+	}
+	
 
 	var jsCode = "function initialize() {\n";
 	jsCode = jsCode + "    var mapCanvas = document.getElementById('map');\n";
@@ -445,14 +453,13 @@ getCode.onclick = function(){
 
     cssCodeContainer.innerHTML = cssCode;
 };
+
+closeCode.onclick = function() {
+
+	codeContainer.className = codeContainer.className.replace("codeIn",  "codeOut");
+}
 	
 
-}
-
-function modify () {
-	window.alert("sg");
-	var width = document.getElementById('width').value;
-	map.style.width = width;
 }
 
 
