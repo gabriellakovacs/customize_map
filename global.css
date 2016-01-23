@@ -336,3 +336,51 @@ input[type=number]::-webkit-outer-spin-button {
 .basic .container.marker {
   display: inline-block;
 }
+
+#codeContainer {
+  position: absolute;
+  top:110vh;
+  left: 0;
+  width: 100vw;
+  background: rgba(8, 127, 106, .8);/*#087F6A;*/
+  padding: 50px;
+  padding-top: 10px;
+}
+#codeContainer h4 {
+  text-align: left;
+  font-weight: bold;
+}
+
+pre {
+  background: black;
+  color: #087F6A;
+  font-weight: 600;
+  border: 1px solid black;
+  padding: 10px;
+  display: inline-block;
+  width: 460px;
+
+}
+
+#closeCode {
+  font-size: 20pt;
+  color: ivory;
+  padding: 9px;
+  text-align: center;
+  
+  width: 40px;
+  border: 1px solid ivory;
+  margin: auto;
+  cursor: pointer;
+
+}
+
+.codeOut {
+  transform: translateY(0vh);
+  transition: transform 5s;
+}
+
+.codeIn {
+  transform: translateY(-110vh);
+  transition: transform 5s;
+}
