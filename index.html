@@ -279,83 +279,31 @@
                         <div class="subMenuOption previewAreaOnMap recolorOnHover" id="administrative.land_parcel">land parcels</div>
                      
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryStrokeAdministrativeLand_parcel" class="setColor geometry stroke featureTypeadministrativeLand_parcel" value="#777777">
-                                        <label for="colorGeometryStrokeAdministrativeLand_parcel">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeLand_parcel">
-                                        <label for="visibilityAdministrativeLand_parcelGeometryStrokeON">on</label>
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeLand_parcel" checked="checked">
-                                        <label for="visibilityAdministrativeLand_parcelGeometryStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryStrokeAdministrativeLand_parcel" class="setColor geometry stroke featureTypeadministrativeLand_parcel" value="#777777">
+                                    <label for="colorGeometryStrokeAdministrativeLand_parcel">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeON" value="on" class="setVisibility geometry stroke on featureTypeadministrativeLand_parcel" checked="checked">
+                                    <label for="visibilityAdministrativeLand_parcelGeometryStrokeON">on</label>
+                                    <input type="radio" name="visibilityAdministrativeLand_parcelGeometryStroke" id="visibilityAdministrativeLand_parcelGeometryStrokeOFF" value="off" class="setVisibility geometry stroke off featureTypeadministrativeLand_parcel">
+                                    <label for="visibilityAdministrativeLand_parcelGeometryStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryStrokeAdministrativeLand_parcel" class="setWeight geometry stroke featureTypeadministrativeLand_parcel" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillAdministrativeLand_parcel" class="setColor text fill featureTypeadministrativeLand_parcel" value="#777777">
-                                        <label for="colorTextFillAdministrativeLand_parcel">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelTextFill" id="visibilityAdministrativeLand_parcelTextFillON" value="on" class="setVisibility text fill on featureTypeadministrativeLand_parcel">
-                                        <label for="visibilityAdministrativeLand_parcelTextFillON">on</label>
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelTextFill" id="visibilityAdministrativeLand_parcelTextFillOFF" value="off" class="setVisibility text fill off featureTypeadministrativeLand_parcel" checked="checked">
-                                        <label for="visibilityAdministrativeLand_parcelTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillAdministrativeLand_parcel" class="setWeight text fill featureTypeadministrativeLand_parcel" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokeAdministrativeLand_parcel" class="setColor text stroke featureTypeadministrativeLand_parcel" value="#777777">
-                                        <label for="colorTextStrokeAdministrativeLand_parcel">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelTextStroke" id="visibilityAdministrativeLand_parcelTextStrokeON" value="on" class="setVisibility text stroke on featureTypeadministrativeLand_parcel">
-                                        <label for="visibilityAdministrativeLand_parcelTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityAdministrativeLand_parcelTextStroke" id="visibilityAdministrativeLand_parcelTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypeadministrativeLand_parcel" checked="checked">
-                                        <label for="visibilityAdministrativeLand_parcelTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokeAdministrativeLand_parcel" class="setWeight text stroke featureTypeadministrativeLand_parcel" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryStrokeAdministrativeLand_parcel" class="setWeight geometry stroke featureTypeadministrativeLand_parcel" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
                         </form>
 
                     </li> 
