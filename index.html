@@ -661,83 +661,106 @@
                             all points of interest
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoi" class="setColor geometry fill featureTypepoi" value="#777777">
+                                    <label for="colorGeometryFillPoi">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoi" checked="checked">
+                                    <label for="visibilityPoiGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoi">
+                                    <label for="visibilityPoiGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoi" class="setWeight geometry fill featureTypepoi" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoi" class="setColor text fill featureTypepoi" value="#777777">
+                                    <label for="colorTextFillPoi">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillON" value="on" class="setVisibility text fill on featureTypepoi">
+                                    <label for="visibilityPoiTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillOFF" value="off" class="setVisibility text fill off featureTypepoi" checked="checked">
+                                    <label for="visibilityPoiTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoi" class="setWeight text fill featureTypepoi" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoi" class="setColor text stroke featureTypepoi" value="#777777">
+                                    <label for="colorTextStrokePoi">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoi">
+                                    <label for="visibilityPoiTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoi" checked="checked">
+                                    <label for="visibilityPoiTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoi" class="setWeight text stroke featureTypepoi" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                    <legend class="customizationPanelHeader">icon</legend>
                                     <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoi" class="setColor geometry fill featureTypepoi" value="#777777">
-                                        <label for="colorGeometryFillPoi">color</label>
+                                        <input type="color" name="color" id="colorIconPoi" class="setColor icon featureTypepoi" value="#777777">
+                                        <label for="colorIconPoi">color</label>
                                         <h4>color</h4>
                                     </div>
                                     
                                     <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoi" checked="checked">
-                                        <label for="visibilityPoiGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiGeometryFill" id="visibilityPoiGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoi">
-                                        <label for="visibilityPoiGeometryFillOFF">off</label>
+                                        <input type="radio" name="visibilityPoiIcon" id="visibilityPoiIconON" value="on" class="setVisibility icon on featureTypepoi">
+                                        <label for="visibilityPoiIconON">on</label>
+                                        <input type="radio" name="visibilityPoiIcon" id="visibilityPoiIconOFF" value="off" class="setVisibility icon off featureTypepoi" checked="checked">
+                                        <label for="visibilityPoiIconOFF">off</label>
                                         <h4>visibility</h4>
                                     </div>
 
                                     <div class="weight container">
                                         <span class="inputNumberContainer">
                                             <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoi" class="setWeight geometry fill featureTypepoi" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoi" class="setColor text fill featureTypepoi" value="#777777">
-                                        <label for="colorTextFillPoi">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillON" value="on" class="setVisibility text fill on featureTypepoi">
-                                        <label for="visibilityPoiTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiTextFill" id="visibilityPoiTextFillOFF" value="off" class="setVisibility text fill off featureTypepoi" checked="checked">
-                                        <label for="visibilityPoiTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoi" class="setWeight text fill featureTypepoi" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoi" class="setColor text stroke featureTypepoi" value="#777777">
-                                        <label for="colorTextStrokePoi">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoi">
-                                        <label for="visibilityPoiTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiTextStroke" id="visibilityPoiTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoi" checked="checked">
-                                        <label for="visibilityPoiTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoi" class="setWeight text stroke featureTypepoi" max="11" min="1" value="1">
+                                            <input type="number" name="weight" id="weightIconPoi" class="setWeight icon featureTypepoi" max="11" min="1" value="1">
                                             <span class="add">+</span>
                                         </span>
                                         <h4>weight</h4>
                                     </div>
                             </fieldset>
-                             
                         </form>
                     </li>
                      
@@ -746,83 +769,106 @@
                             attraction
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiAttraction" class="setColor geometry fill featureTypepoiAttraction" value="#777777">
-                                        <label for="colorGeometryFillPoiAttraction">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiAttraction" checked="checked">
-                                        <label for="visibilityPoiAttractionGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiAttraction">
-                                        <label for="visibilityPoiAttractionGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiAttraction" class="setColor geometry fill featureTypepoiAttraction" value="#777777">
+                                    <label for="colorGeometryFillPoiAttraction">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiAttraction" checked="checked">
+                                    <label for="visibilityPoiAttractionGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiAttractionGeometryFill" id="visibilityPoiAttractionGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiAttraction">
+                                    <label for="visibilityPoiAttractionGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiAttraction" class="setWeight geometry fill featureTypepoiAttraction" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiAttraction" class="setColor text fill featureTypepoiAttraction" value="#777777">
-                                        <label for="colorTextFillPoiAttraction">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillON" value="on" class="setVisibility text fill on featureTypepoiAttraction">
-                                        <label for="visibilityPoiAttractionTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiAttraction" checked="checked">
-                                        <label for="visibilityPoiAttractionTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                        <input type="number" name="weight" id="weightTextFillPoiAttraction" class="setWeight text fill featureTypepoiAttraction" max="11" min="1" value="1">
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiAttraction" class="setWeight geometry fill featureTypepoiAttraction" max="11" min="1" value="1">
                                         <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiAttraction" class="setColor text stroke featureTypepoiAttraction" value="#777777">
-                                        <label for="colorTextStrokePoiAttraction">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiAttraction">
-                                        <label for="visibilityPoiAttractionTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiAttraction" checked="checked">
-                                        <label for="visibilityPoiAttractionTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiAttraction" class="setWeight text stroke featureTypepoiAttraction" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiAttraction" class="setColor text fill featureTypepoiAttraction" value="#777777">
+                                    <label for="colorTextFillPoiAttraction">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillON" value="on" class="setVisibility text fill on featureTypepoiAttraction">
+                                    <label for="visibilityPoiAttractionTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiAttractionTextFill" id="visibilityPoiAttractionTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiAttraction" checked="checked">
+                                    <label for="visibilityPoiAttractionTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                    <input type="number" name="weight" id="weightTextFillPoiAttraction" class="setWeight text fill featureTypepoiAttraction" max="11" min="1" value="1">
+                                    <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiAttraction" class="setColor text stroke featureTypepoiAttraction" value="#777777">
+                                    <label for="colorTextStrokePoiAttraction">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiAttraction">
+                                    <label for="visibilityPoiAttractionTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiAttractionTextStroke" id="visibilityPoiAttractionTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiAttraction" checked="checked">
+                                    <label for="visibilityPoiAttractionTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiAttraction" class="setWeight text stroke featureTypepoiAttraction" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiAttraction" class="setColor icon featureTypepoiAttraction" value="#777777">
+                                    <label for="colorIconPoiAttraction">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiAttractionIcon" id="visibilityPoiAttractionIconON" value="on" class="setVisibility icon on featureTypepoiAttraction">
+                                    <label for="visibilityPoiAttractionIconON">on</label>
+                                    <input type="radio" name="visibilityPoiAttractionIcon" id="visibilityPoiAttractionIconOFF" value="off" class="setVisibility icon off featureTypepoiAttraction" checked="checked">
+                                    <label for="visibilityPoiAttractionIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiAttraction" class="setWeight icon featureTypepoiAttraction" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset> 
                         </form>
                     </li>
                      
@@ -831,83 +877,106 @@
                             business
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiBusiness" class="setColor geometry fill featureTypepoiBusiness" value="#777777">
-                                        <label for="colorGeometryFillPoiBusiness">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiBusiness" checked="checked">
-                                        <label for="visibilityPoiBusinessGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiBusiness">
-                                        <label for="visibilityPoiBusinessGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiBusiness" class="setColor geometry fill featureTypepoiBusiness" value="#777777">
+                                    <label for="colorGeometryFillPoiBusiness">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiBusiness" checked="checked">
+                                    <label for="visibilityPoiBusinessGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiBusinessGeometryFill" id="visibilityPoiBusinessGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiBusiness">
+                                    <label for="visibilityPoiBusinessGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiBusiness" class="setWeight geometry fill featureTypepoiBusiness" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiBusiness" class="setColor text fill featureTypepoiBusiness" value="#777777">
-                                        <label for="colorTextFillPoiBusiness">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillON" value="on" class="setVisibility text fill on featureTypepoiBusiness">
-                                        <label for="visibilityPoiBusinessTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiBusiness" checked="checked">
-                                        <label for="visibilityPoiBusinessTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiBusiness" class="setWeight text fill featureTypepoiBusiness" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiBusiness" class="setColor text stroke featureTypepoiBusiness" value="#777777">
-                                        <label for="colorTextStrokePoiBusiness">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiBusiness">
-                                        <label for="visibilityPoiBusinessTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiBusiness" checked="checked">
-                                        <label for="visibilityPoiBusinessTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiBusiness" class="setWeight text stroke featureTypepoiBusiness" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiBusiness" class="setWeight geometry fill featureTypepoiBusiness" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiBusiness" class="setColor text fill featureTypepoiBusiness" value="#777777">
+                                    <label for="colorTextFillPoiBusiness">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillON" value="on" class="setVisibility text fill on featureTypepoiBusiness">
+                                    <label for="visibilityPoiBusinessTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiBusinessTextFill" id="visibilityPoiBusinessTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiBusiness" checked="checked">
+                                    <label for="visibilityPoiBusinessTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiBusiness" class="setWeight text fill featureTypepoiBusiness" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiBusiness" class="setColor text stroke featureTypepoiBusiness" value="#777777">
+                                    <label for="colorTextStrokePoiBusiness">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiBusiness">
+                                    <label for="visibilityPoiBusinessTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiBusinessTextStroke" id="visibilityPoiBusinessTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiBusiness" checked="checked">
+                                    <label for="visibilityPoiBusinessTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiBusiness" class="setWeight text stroke featureTypepoiBusiness" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiBusiness" class="setColor icon featureTypepoiBusiness" value="#777777">
+                                    <label for="colorIconPoiBusiness">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiBusinessIcon" id="visibilityPoiBusinessIconON" value="on" class="setVisibility icon on featureTypepoiBusiness">
+                                    <label for="visibilityPoiBusinessIconON">on</label>
+                                    <input type="radio" name="visibilityPoiBusinessIcon" id="visibilityPoiBusinessIconOFF" value="off" class="setVisibility icon off featureTypepoiBusiness" checked="checked">
+                                    <label for="visibilityPoiBusinessIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiBusiness" class="setWeight icon featureTypepoiBusiness" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
@@ -916,83 +985,106 @@
                             government
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiGovernment" class="setColor geometry fill featureTypepoiGovernment" value="#777777">
-                                        <label for="colorGeometryFillPoiGovernment">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiGovernment" checked="checked">
-                                        <label for="visibilityPoiGovernmentGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiGovernment">
-                                        <label for="visibilityPoiGovernmentGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiGovernment" class="setColor geometry fill featureTypepoiGovernment" value="#777777">
+                                    <label for="colorGeometryFillPoiGovernment">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiGovernment" checked="checked">
+                                    <label for="visibilityPoiGovernmentGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiGovernmentGeometryFill" id="visibilityPoiGovernmentGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiGovernment">
+                                    <label for="visibilityPoiGovernmentGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiGovernment" class="setWeight geometry fill featureTypepoiGovernment" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiGovernment" class="setColor text fill featureTypepoiGovernment" value="#777777">
-                                        <label for="colorTextFillPoiGovernment">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillON" value="on" class="setVisibility text fill on featureTypepoiGovernment">
-                                        <label for="visibilityPoiGovernmentTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiGovernment" checked="checked">
-                                        <label for="visibilityPoiGovernmentTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiGovernment" class="setWeight text fill featureTypepoiGovernment" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiGovernment" class="setColor text stroke featureTypepoiGovernment" value="#777777">
-                                        <label for="colorTextStrokePoiGovernment">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiGovernment">
-                                        <label for="visibilityPoiGovernmentTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiGovernment" checked="checked">
-                                        <label for="visibilityPoiGovernmentTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiGovernment" class="setWeight text stroke featureTypepoiGovernment" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiGovernment" class="setWeight geometry fill featureTypepoiGovernment" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiGovernment" class="setColor text fill featureTypepoiGovernment" value="#777777">
+                                    <label for="colorTextFillPoiGovernment">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillON" value="on" class="setVisibility text fill on featureTypepoiGovernment">
+                                    <label for="visibilityPoiGovernmentTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiGovernmentTextFill" id="visibilityPoiGovernmentTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiGovernment" checked="checked">
+                                    <label for="visibilityPoiGovernmentTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiGovernment" class="setWeight text fill featureTypepoiGovernment" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiGovernment" class="setColor text stroke featureTypepoiGovernment" value="#777777">
+                                    <label for="colorTextStrokePoiGovernment">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiGovernment">
+                                    <label for="visibilityPoiGovernmentTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiGovernmentTextStroke" id="visibilityPoiGovernmentTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiGovernment" checked="checked">
+                                    <label for="visibilityPoiGovernmentTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiGovernment" class="setWeight text stroke featureTypepoiGovernment" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiGovernment" class="setColor icon featureTypepoiGovernment" value="#777777">
+                                    <label for="colorIconPoiGovernment">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiGovernmentIcon" id="visibilityPoiGovernmentIconON" value="on" class="setVisibility icon on featureTypepoiGovernment">
+                                    <label for="visibilityPoiGovernmentIconON">on</label>
+                                    <input type="radio" name="visibilityPoiGovernmentIcon" id="visibilityPoiGovernmentIconOFF" value="off" class="setVisibility icon off featureTypepoiGovernment" checked="checked">
+                                    <label for="visibilityPoiGovernmentIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiGovernment" class="setWeight icon featureTypepoiGovernment" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
@@ -1001,83 +1093,107 @@
                             medical
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiMedical" class="setColor geometry fill featureTypepoiMedical" value="#777777">
-                                        <label for="colorGeometryFillPoiMedical">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiMedical" checked="checked">
-                                        <label for="visibilityPoiMedicalGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiMedical">
-                                        <label for="visibilityPoiMedicalGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiMedical" class="setColor geometry fill featureTypepoiMedical" value="#777777">
+                                    <label for="colorGeometryFillPoiMedical">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiMedical" checked="checked">
+                                    <label for="visibilityPoiMedicalGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiMedicalGeometryFill" id="visibilityPoiMedicalGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiMedical">
+                                    <label for="visibilityPoiMedicalGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiMedical" class="setWeight geometry fill featureTypepoiMedical" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiMedical" class="setColor text fill featureTypepoiMedical" value="#777777">
-                                        <label for="colorTextFillPoiMedical">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillON" value="on" class="setVisibility text fill on featureTypepoiMedical">
-                                        <label for="visibilityPoiMedicalTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiMedical" checked="checked">
-                                        <label for="visibilityPoiMedicalTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiMedical" class="setWeight text fill featureTypepoiMedical" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiMedical" class="setColor text stroke featureTypepoiMedical" value="#777777">
-                                        <label for="colorTextStrokePoiMedical">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiMedical">
-                                        <label for="visibilityPoiMedicalTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiMedical" checked="checked">
-                                        <label for="visibilityPoiMedicalTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiMedical" class="setWeight text stroke featureTypepoiMedical" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiMedical" class="setWeight geometry fill featureTypepoiMedical" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiMedical" class="setColor text fill featureTypepoiMedical" value="#777777">
+                                    <label for="colorTextFillPoiMedical">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillON" value="on" class="setVisibility text fill on featureTypepoiMedical">
+                                    <label for="visibilityPoiMedicalTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiMedicalTextFill" id="visibilityPoiMedicalTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiMedical" checked="checked">
+                                    <label for="visibilityPoiMedicalTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiMedical" class="setWeight text fill featureTypepoiMedical" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiMedical" class="setColor text stroke featureTypepoiMedical" value="#777777">
+                                    <label for="colorTextStrokePoiMedical">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiMedical">
+                                    <label for="visibilityPoiMedicalTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiMedicalTextStroke" id="visibilityPoiMedicalTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiMedical" checked="checked">
+                                    <label for="visibilityPoiMedicalTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiMedical" class="setWeight text stroke featureTypepoiMedical" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiMedical" class="setColor icon featureTypepoiMedical" value="#777777">
+                                    <label for="colorIconPoiMedical">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiMedicalIcon" id="visibilityPoiMedicalIconON" value="on" class="setVisibility icon on featureTypepoiMedical">
+                                    <label for="visibilityPoiMedicalIconON">on</label>
+                                    <input type="radio" name="visibilityPoiMedicalIcon" id="visibilityPoiMedicalIconOFF" value="off" class="setVisibility icon off featureTypepoiMedical" checked="checked">
+                                    <label for="visibilityPoiMedicalIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiMedical" class="setWeight icon featureTypepoiMedical" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
@@ -1086,83 +1202,81 @@
                             park
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiPark" class="setColor geometry fill featureTypepoiPark" value="#777777">
-                                        <label for="colorGeometryFillPoiPark">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPark" checked="checked">
-                                        <label for="visibilityPoiParkGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPark">
-                                        <label for="visibilityPoiParkGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiPark" class="setColor geometry fill featureTypepoiPark" value="#777777">
+                                    <label for="colorGeometryFillPoiPark">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPark" checked="checked">
+                                    <label for="visibilityPoiParkGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiParkGeometryFill" id="visibilityPoiParkGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPark">
+                                    <label for="visibilityPoiParkGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiPark" class="setWeight geometry fill featureTypepoiPark" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiPark" class="setColor text fill featureTypepoiPark" value="#777777">
-                                        <label for="colorTextFillPoiPark">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillON" value="on" class="setVisibility text fill on featureTypepoiPark">
-                                        <label for="visibilityPoiParkTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPark" checked="checked">
-                                        <label for="visibilityPoiParkTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiPark" class="setWeight text fill featureTypepoiPark" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiPark" class="setColor text stroke featureTypepoiPark" value="#777777">
-                                        <label for="colorTextStrokePoiPark">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPark">
-                                        <label for="visibilityPoiParkTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPark" checked="checked">
-                                        <label for="visibilityPoiParkTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiPark" class="setWeight text stroke featureTypepoiPark" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiPark" class="setWeight geometry fill featureTypepoiPark" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiPark" class="setColor text fill featureTypepoiPark" value="#777777">
+                                    <label for="colorTextFillPoiPark">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillON" value="on" class="setVisibility text fill on featureTypepoiPark">
+                                    <label for="visibilityPoiParkTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiParkTextFill" id="visibilityPoiParkTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPark" checked="checked">
+                                    <label for="visibilityPoiParkTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiPark" class="setWeight text fill featureTypepoiPark" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiPark" class="setColor text stroke featureTypepoiPark" value="#777777">
+                                    <label for="colorTextStrokePoiPark">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPark">
+                                    <label for="visibilityPoiParkTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiParkTextStroke" id="visibilityPoiParkTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPark" checked="checked">
+                                    <label for="visibilityPoiParkTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiPark" class="setWeight text stroke featureTypepoiPark" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
@@ -1171,83 +1285,106 @@
                             place of worship
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiPlace_of_worship" class="setColor geometry fill featureTypepoiPlace_of_worship" value="#777777">
-                                        <label for="colorGeometryFillPoiPlace_of_worship">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPlace_of_worship" checked="checked">
-                                        <label for="visibilityPoiPlace_of_worshipGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPlace_of_worship">
-                                        <label for="visibilityPoiPlace_of_worshipGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiPlace_of_worship" class="setColor geometry fill featureTypepoiPlace_of_worship" value="#777777">
+                                    <label for="colorGeometryFillPoiPlace_of_worship">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiPlace_of_worship" checked="checked">
+                                    <label for="visibilityPoiPlace_of_worshipGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipGeometryFill" id="visibilityPoiPlace_of_worshipGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiPlace_of_worship">
+                                    <label for="visibilityPoiPlace_of_worshipGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiPlace_of_worship" class="setWeight geometry fill featureTypepoiPlace_of_worship" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiPlace_of_worship" class="setColor text fill featureTypepoiPlace_of_worship" value="#777777">
-                                        <label for="colorTextFillPoiPlace_of_worship">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillON" value="on" class="setVisibility text fill on featureTypepoiPlace_of_worship">
-                                        <label for="visibilityPoiPlace_of_worshipTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPlace_of_worship" checked="checked">
-                                        <label for="visibilityPoiPlace_of_worshipTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiPlace_of_worship" class="setWeight text fill featureTypepoiPlace_of_worship" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiPlace_of_worship" class="setColor text stroke featureTypepoiPlace_of_worship" value="#777777">
-                                        <label for="colorTextStrokePoiPlace_of_worship">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPlace_of_worship">
-                                        <label for="visibilityPoiPlace_of_worshipTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPlace_of_worship" checked="checked">
-                                        <label for="visibilityPoiPlace_of_worshipTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiPlace_of_worship" class="setWeight text stroke featureTypepoiPlace_of_worship" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiPlace_of_worship" class="setWeight geometry fill featureTypepoiPlace_of_worship" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiPlace_of_worship" class="setColor text fill featureTypepoiPlace_of_worship" value="#777777">
+                                    <label for="colorTextFillPoiPlace_of_worship">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillON" value="on" class="setVisibility text fill on featureTypepoiPlace_of_worship">
+                                    <label for="visibilityPoiPlace_of_worshipTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipTextFill" id="visibilityPoiPlace_of_worshipTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiPlace_of_worship" checked="checked">
+                                    <label for="visibilityPoiPlace_of_worshipTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiPlace_of_worship" class="setWeight text fill featureTypepoiPlace_of_worship" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiPlace_of_worship" class="setColor text stroke featureTypepoiPlace_of_worship" value="#777777">
+                                    <label for="colorTextStrokePoiPlace_of_worship">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiPlace_of_worship">
+                                    <label for="visibilityPoiPlace_of_worshipTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipTextStroke" id="visibilityPoiPlace_of_worshipTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiPlace_of_worship" checked="checked">
+                                    <label for="visibilityPoiPlace_of_worshipTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiPlace_of_worship" class="setWeight text stroke featureTypepoiPlace_of_worship" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiPlace_of_worship" class="setColor icon featureTypepoiPlace_of_worship" value="#777777">
+                                    <label for="colorIconPoiPlace_of_worship">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipIcon" id="visibilityPoiPlace_of_worshipIconON" value="on" class="setVisibility icon on featureTypepoiPlace_of_worship">
+                                    <label for="visibilityPoiPlace_of_worshipIconON">on</label>
+                                    <input type="radio" name="visibilityPoiPlace_of_worshipIcon" id="visibilityPoiPlace_of_worshipIconOFF" value="off" class="setVisibility icon off featureTypepoiPlace_of_worship" checked="checked">
+                                    <label for="visibilityPoiPlace_of_worshipIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiPlace_of_worship" class="setWeight icon featureTypepoiPlace_of_worship" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
@@ -1256,83 +1393,106 @@
                             school
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiSchool" class="setColor geometry fill featureTypepoiSchool" value="#777777">
-                                        <label for="colorGeometryFillPoiSchool">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSchool" checked="checked">
-                                        <label for="visibilityPoiSchoolGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSchool">
-                                        <label for="visibilityPoiSchoolGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiSchool" class="setColor geometry fill featureTypepoiSchool" value="#777777">
+                                    <label for="colorGeometryFillPoiSchool">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSchool" checked="checked">
+                                    <label for="visibilityPoiSchoolGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiSchoolGeometryFill" id="visibilityPoiSchoolGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSchool">
+                                    <label for="visibilityPoiSchoolGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiSchool" class="setWeight geometry fill featureTypepoiSchool" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiSchool" class="setColor text fill featureTypepoiSchool" value="#777777">
-                                        <label for="colorTextFillPoiSchool">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillON" value="on" class="setVisibility text fill on featureTypepoiSchool">
-                                        <label for="visibilityPoiSchoolTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSchool" checked="checked">
-                                        <label for="visibilityPoiSchoolTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiSchool" class="setWeight text fill featureTypepoiSchool" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiSchool" class="setColor text stroke featureTypepoiSchool" value="#777777">
-                                        <label for="colorTextStrokePoiSchool">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSchool">
-                                        <label for="visibilityPoiSchoolTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSchool" checked="checked">
-                                        <label for="visibilityPoiSchoolTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiSchool" class="setWeight text stroke featureTypepoiSchool" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiSchool" class="setWeight geometry fill featureTypepoiSchool" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiSchool" class="setColor text fill featureTypepoiSchool" value="#777777">
+                                    <label for="colorTextFillPoiSchool">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillON" value="on" class="setVisibility text fill on featureTypepoiSchool">
+                                    <label for="visibilityPoiSchoolTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiSchoolTextFill" id="visibilityPoiSchoolTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSchool" checked="checked">
+                                    <label for="visibilityPoiSchoolTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiSchool" class="setWeight text fill featureTypepoiSchool" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiSchool" class="setColor text stroke featureTypepoiSchool" value="#777777">
+                                    <label for="colorTextStrokePoiSchool">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSchool">
+                                    <label for="visibilityPoiSchoolTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiSchoolTextStroke" id="visibilityPoiSchoolTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSchool" checked="checked">
+                                    <label for="visibilityPoiSchoolTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiSchool" class="setWeight text stroke featureTypepoiSchool" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiSchool" class="setColor icon featureTypepoiSchool" value="#777777">
+                                    <label for="colorIconPoiSchool">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSchoolIcon" id="visibilityPoiSchoolIconON" value="on" class="setVisibility icon on featureTypepoiSchool">
+                                    <label for="visibilityPoiconiSchoolIconON">on</label>
+                                    <input type="radio" name="visibilityPoiSchoolIcon" id="visibilityPoiSchoolIconOFF" value="off" class="setVisibility icon off featureTypepoiSchool" checked="checked">
+                                    <label for="visibilityPoiSchoolIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiSchool" class="setWeight icon featureTypepoiSchool" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>  
                         </form>
                     </li>
                      
@@ -1341,83 +1501,106 @@
                             sports complex
                         </div>
                         <form class="embeddingLevel2 customizationPanelContainer collapse">
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">geometry - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorGeometryFillPoiSports_complex" class="setColor geometry fill featureTypepoiSports_complex" value="#777777">
-                                        <label for="colorGeometryFillPoiSports_complex">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSports_complex" checked="checked">
-                                        <label for="visibilityPoiSports_complexGeometryFillON">on</label>
-                                        <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSports_complex">
-                                        <label for="visibilityPoiSports_complexGeometryFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">geometry - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorGeometryFillPoiSports_complex" class="setColor geometry fill featureTypepoiSports_complex" value="#777777">
+                                    <label for="colorGeometryFillPoiSports_complex">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillON" value="on" class="setVisibility geometry fill on featureTypepoiSports_complex" checked="checked">
+                                    <label for="visibilityPoiSports_complexGeometryFillON">on</label>
+                                    <input type="radio" name="visibilityPoiSports_complexGeometryFill" id="visibilityPoiSports_complexGeometryFillOFF" value="off" class="setVisibility geometry fill off featureTypepoiSports_complex">
+                                    <label for="visibilityPoiSports_complexGeometryFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
 
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightGeometryFillPoiSports_complex" class="setWeight geometry fill featureTypepoiSports_complex" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - fill</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextFillPoiSports_complex" class="setColor text fill featureTypepoiSports_complex" value="#777777">
-                                        <label for="colorTextFillPoiSports_complex">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillON" value="on" class="setVisibility text fill on featureTypepoiSports_complex">
-                                        <label for="visibilityPoiSports_complexTextFillON">on</label>
-                                        <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSports_complex" checked="checked">
-                                        <label for="visibilityPoiSports_complexTextFillOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextFillPoiSports_complex" class="setWeight text fill featureTypepoiSports_complex" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset class="customizationPanel">
-                                    <legend class="customizationPanelHeader">text - stroke</legend>
-                                    <div class="color container">
-                                        <input type="color" name="color" id="colorTextStrokePoiSports_complex" class="setColor text stroke featureTypepoiSports_complex" value="#777777">
-                                        <label for="colorTextStrokePoiSports_complex">color</label>
-                                        <h4>color</h4>
-                                    </div>
-                                    
-                                    <div class="visibility container switchOnOff">
-                                        <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSports_complex">
-                                        <label for="visibilityPoiSports_complexTextStrokeON">on</label>
-                                        <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSports_complex" checked="checked">
-                                        <label for="visibilityPoiSports_complexTextStrokeOFF">off</label>
-                                        <h4>visibility</h4>
-                                    </div>
-
-                                    <div class="weight container">
-                                        <span class="inputNumberContainer">
-                                            <span class="sub">-</span>
-                                            <input type="number" name="weight" id="weightTextStrokePoiSports_complex" class="setWeight text stroke featureTypepoiSports_complex" max="11" min="1" value="1">
-                                            <span class="add">+</span>
-                                        </span>
-                                        <h4>weight</h4>
-                                    </div>
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightGeometryFillPoiSports_complex" class="setWeight geometry fill featureTypepoiSports_complex" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
                             </fieldset>
-                             
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - fill</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextFillPoiSports_complex" class="setColor text fill featureTypepoiSports_complex" value="#777777">
+                                    <label for="colorTextFillPoiSports_complex">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillON" value="on" class="setVisibility text fill on featureTypepoiSports_complex">
+                                    <label for="visibilityPoiSports_complexTextFillON">on</label>
+                                    <input type="radio" name="visibilityPoiSports_complexTextFill" id="visibilityPoiSports_complexTextFillOFF" value="off" class="setVisibility text fill off featureTypepoiSports_complex" checked="checked">
+                                    <label for="visibilityPoiSports_complexTextFillOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextFillPoiSports_complex" class="setWeight text fill featureTypepoiSports_complex" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">text - stroke</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorTextStrokePoiSports_complex" class="setColor text stroke featureTypepoiSports_complex" value="#777777">
+                                    <label for="colorTextStrokePoiSports_complex">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeON" value="on" class="setVisibility text stroke on featureTypepoiSports_complex">
+                                    <label for="visibilityPoiSports_complexTextStrokeON">on</label>
+                                    <input type="radio" name="visibilityPoiSports_complexTextStroke" id="visibilityPoiSports_complexTextStrokeOFF" value="off" class="setVisibility text stroke off featureTypepoiSports_complex" checked="checked">
+                                    <label for="visibilityPoiSports_complexTextStrokeOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightTextStrokePoiSports_complex" class="setWeight text stroke featureTypepoiSports_complex" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
+                            <fieldset class="customizationPanel">
+                                <legend class="customizationPanelHeader">icon</legend>
+                                <div class="color container">
+                                    <input type="color" name="color" id="colorIconPoiSports_complex" class="setColor icon featureTypepoiSports_complex" value="#777777">
+                                    <label for="colorIconPoiSports_complex">color</label>
+                                    <h4>color</h4>
+                                </div>
+                                
+                                <div class="visibility container switchOnOff">
+                                    <input type="radio" name="visibilityPoiSports_complexIcon" id="visibilityPoiSports_complexIconON" value="on" class="setVisibility icon on featureTypepoiSports_complex">
+                                    <label for="visibilityPoiSports_complexIconON">on</label>
+                                    <input type="radio" name="visibilityPoiSports_complexIcon" id="visibilityPoiSports_complexIconOFF" value="off" class="setVisibility icon off featureTypepoiSports_complex" checked="checked">
+                                    <label for="visibilityPoiSports_complexIconOFF">off</label>
+                                    <h4>visibility</h4>
+                                </div>
+
+                                <div class="weight container">
+                                    <span class="inputNumberContainer">
+                                        <span class="sub">-</span>
+                                        <input type="number" name="weight" id="weightIconPoiSports_complex" class="setWeight icon featureTypepoiSports_complex" max="11" min="1" value="1">
+                                        <span class="add">+</span>
+                                    </span>
+                                    <h4>weight</h4>
+                                </div>
+                            </fieldset>
                         </form>
                     </li>
                      
