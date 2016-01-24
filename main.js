@@ -312,7 +312,7 @@ function changeMapStyle(stylerType, InputList) {
 						var stylerObject = {visibility:stylerValue};
 					};
 					
-//assign value to fillORstroke based on changed input`s class  name ("" is only an option when textORgeometry is labels.icon)
+//assign value to fillORstroke based on changed input`s class  name ("" is only an option when textORgeometry is labels.icon or just labels)
 					if (this.className.indexOf("fill") > -1) {
 						var fillORstroke = ".fill";
 					} else if (this.className.indexOf("stroke") > -1) {
@@ -328,6 +328,8 @@ function changeMapStyle(stylerType, InputList) {
 						var textORgeometry = "labels.text";
 					} else if (this.className.indexOf("icon") > -1) {
 						var textORgeometry = "labels.icon";
+					} else if (this.className.indexOf("labels") > -1) {
+						var textORgeometry = "labels";
 					}
 
 //assign value to elementType by concatenating textORgeometry with fillORstroke
