@@ -237,7 +237,7 @@
 				var expandedItem = document.querySelectorAll("." + classNameOfElementToBeOpened + ".expand");
 
 				if (expandedItem.length>0) {
-					expandedItem[0].className =  expandedItem[0].className.replace("expand", "collapse");
+					expandedItem[0].className = expandedItem[0].className.replace("expand", "collapse");
 				}
 				elementToBeOpened.className = elementToBeOpened.className.replace("collapse", "expand");
 			} else {
@@ -258,7 +258,6 @@
 	    	openNextLevelEmbedding("subMenuOption", "embeddingLevel2");
 		}
 	}
-
 
 //functions to increment/decrement number input
 function incrementWeight(numberInput) {
@@ -409,6 +408,7 @@ getCode.onclick = function(){
 	} else {
 		codeContainer.className = codeContainer.className + "codeIn";
 	}
+	codeContainer.style.position = "absolute";
 	
 
 	var jsCode = "function initialize() {\n";
@@ -459,6 +459,7 @@ getCode.onclick = function(){
 closeCode.onclick = function() {
 
 	codeContainer.className = codeContainer.className.replace("codeIn",  "codeOut");
+	codeContainer.style.position = "fixed";
 }
 	
 
