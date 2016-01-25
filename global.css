@@ -58,16 +58,16 @@ input, select, option {
   cursor: pointer;
   background: #888;
   color: #000;
-  margin: .4em;
-  padding: .5em;
+  margin-top: 8px;
+  padding: 10px;
 }
 
 .subMenuOption{
   cursor: pointer;
   background: #fff;
   color: #333;
-  margin: .4em;
-  padding: .5em;
+  margin-top: 8px;
+  padding: 10px;
 }
 
 #getCode {
@@ -126,13 +126,15 @@ input, select, option {
 
 /*-------------------------CUSTOMIZATION PANEL-------------------------*/
 .customizationPanelContainer {
+  margin-top: 8px;
   color:#fff;
-	transition: height 300s;
 }
 
 .customizationPanel {
   background: #25323B;
   border: none;
+  margin: 0;
+  width: 280px;
 }
 
 .customizationPanelHeader {
