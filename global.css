@@ -155,6 +155,16 @@ label {
   cursor: pointer;
 }
 
+label::-moz-selection {
+    color: transparent;
+    background: transparent;
+}
+
+label::selection {
+    color: transparent;
+    background: transparent;
+}
+
 .container label{
   line-height: 31px;
   width: 31px;
@@ -361,7 +371,16 @@ pre {
   padding: 10px;
   display: inline-block;
   width: 460px;
+}
 
+pre::-moz-selection {
+    color: black;
+    background: rgba(8, 127, 106, .8);
+}
+
+pre::selection {
+    color: black;
+    background: rgba(8, 127, 106, .8);
 }
 
 #closeCode {
