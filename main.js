@@ -346,24 +346,24 @@ function changeMapStyle(stylerType, InputList) {
 						}
 					}
 //check if there is already a styling with same featureType and elementType
-					for (style in originalStyle) {
-						if (originalStyle[style].featureType === featureType && originalStyle[style].elementType === elementType) {
-							for (styleListItem in originalStyle[style].stylers){
+					for (indexOfStyle in originalStyle) {
+						if (originalStyle[indexOfStyle].featureType === featureType && originalStyle[indexOfStyle].elementType === elementType) {
+							for (styleListItem in originalStyle[indexOfStyle].stylers){
 								//if there is check if they already have the same stylerType(color/weigt/visibility)
-								if (originalStyle[style].stylers[styleListItem][stylerType]){
+								if (originalStyle[indexOfStyle].stylers[styleListItem][stylerType]){
 									//if they have, change it to new value
-									originalStyle[style].stylers[styleListItem] = stylerObject;
+									originalStyle[indexOfStyle].stylers[styleListItem] = stylerObject;
 									break
 								}
 								//if they don't, append new styler object to already existing stylesList
-								else if (Number(styleListItem) === originalStyle[style].stylers.length-1) {
-									originalStyle[style].stylers.push(stylerObject);
+								else if (Number(styleListItem) === originalStyle[indexOfStyle].stylers.length-1) {
+									originalStyle[indexOfStyle].stylers.push(stylerObject);
 								}
 							}
 							break	
 						}
 						// if there is not yet a styling with same featureType and elementType, than create a new style
-						else if (Number(style) === originalStyle.length-1) {
+						else if (Number(indexOfStyle) === originalStyle.length-1) {
 							
 							//create new map style 
 							var mapStyle = {
@@ -417,23 +417,23 @@ getCode.onclick = function(){
 	jsCode = jsCode + "    var map = new google.maps.Map(mapCanvas, mapOptions);\n";
 	jsCode = jsCode + "    var style = [\n";
 	
-	for (style in originalStyle){
+	for (indexOfStyle in originalStyle){
 		jsCode = jsCode + "    {\n";
-		jsCode = jsCode + "        featureType: " +  "'" + originalStyle[style].featureType + "'" + ",\n";
-		jsCode = jsCode + "        elementType: " +  "'" + originalStyle[style].elementType + "'" + ",\n";
+		jsCode = jsCode + "        featureType: " +  "'" + originalStyle[indexOfStyle].featureType + "'" + ",\n";
+		jsCode = jsCode + "        elementType: " +  "'" + originalStyle[indexOfStyle].elementType + "'" + ",\n";
 		jsCode = jsCode + "        stylers: [";
 
-		for (listOfStyles in originalStyle[style].stylers) {
-			for (nameOfSTyler in originalStyle[style].stylers[listOfStyles]) {
-				jsCode = jsCode + "\n" + "            "+ "{" + nameOfSTyler + ":" + "'" + originalStyle[style].stylers[listOfStyles][nameOfSTyler] + "'" + "}";
+		for (listOfStyles in originalStyle[indexOfStyle].stylers) {
+			for (nameOfSTyler in originalStyle[indexOfStyle].stylers[listOfStyles]) {
+				jsCode = jsCode + "\n" + "            "+ "{" + nameOfSTyler + ":" + "'" + originalStyle[indexOfStyle].stylers[listOfStyles][nameOfSTyler] + "'" + "}";
 			}
-			if (Number(listOfStyles) < originalStyle[style].stylers.length-1) {
+			if (Number(listOfStyles) < originalStyle[indexOfStyle].stylers.length-1) {
 				jsCode = jsCode + ", ";
 			}
 		}
 		jsCode = jsCode + "\n        ]\n    }";
 
-		if (Number(style) < originalStyle.length-1) {
+		if (Number(indexOfStyle) < originalStyle.length-1) {
 				jsCode = jsCode + ",\n";
 			} else {
 				jsCode = jsCode + "\n];";
