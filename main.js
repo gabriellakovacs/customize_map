@@ -360,6 +360,9 @@ function changeMapStyle(stylerType, InputList) {
 									originalStyle[indexOfStyle].stylers.push(stylerObject);
 								}
 							}
+							//put the modified style to the end of styles list, so that it is the last thing, that effects the map
+							originalStyle.push(originalStyle[indexOfStyle]);
+							originalStyle.splice( indexOfStyle, 1 );
 							break	
 						}
 						// if there is not yet a styling with same featureType and elementType, than create a new style
